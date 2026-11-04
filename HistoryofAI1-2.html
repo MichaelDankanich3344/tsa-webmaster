@@ -1,35 +1,181 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Curiosity Lab | What is AI?</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
-  </head>
-  <body>
-        <body>
-      <a class="brand" href="index.html">Curiosity Lab</a>
-    <header>
-      <h1 class="Header" >Key people and contributions </p>
-        <p class = "eyebrow">Success Criteria: Research two early contributors. What did each contribute, and why did it matter? </p>
-        <p class = "p2">Two early notable contributors consisted of Alan Turing and Arthur Samuel. Alan Turing had developed the fundamental idea that computers/machines can learn from experience. He developed the Turing test which set a standard for AI intelligence. 1952: Arthur Samuel developed a checkers program that was able to learn from experience showing one of the earliest demonstrations of machine learning, which Ais utilizes today.  
-      <h1 class="Header"> Major Timeline of events
-        <p class = "p2">1952- Anthony Oettingrer develops a machine learning program that was called the, “The shopper” The environment contained 8 shops and was able to remember what each of the shops had in stock, and where each item it was told to buy was located. One of the earliest processes in machine learning. 
-        <p class = "p2">1954- Belmont Farley and Wesley Clark researched simulations of computer systems in organizing itself to complete computer tasks. They trained small neural networks to organize small patterns, limited by the computer memory they call only have 128 neurons (each being a neuron network) This was a proposed concept of human mind being incorporated into computer learning. 
-        <p class = "p2">1955-1956- Allen Newell, Herbet Simon, and J Clifford developed The Logic Theorist. This program could prove mathematical theorems. It utilized symbolic expression and logic rules to gather data from Principia Mathmatica the earliest of math theorem books and be able to replicate and prove the same theorems found. This showed that computers could carry aspects of reasoning beyond just solving arithmetic like in calculators.  
-        <p class = "p2">1957-1958- Frank Rosanblatt developed perception. Which was the first machine or artificial network to recognize patterns. This utilized an IBM 704, and after being given punch cards was able to distinguish each of the cards mark from the left and right. This was a breakthrough because it laid the foundations for the rest of neural networks in recognizing images, text, or data provided. 
-        <p class = "p2">1965- At Standford, students Joshua Lederberg and Edward Feignbaum developed DENDRAL which used chemical knowledge and experimental data to identify molecular structures for chemistry. This was one of the first examples of AI being used for research and showed the value in given AI knowledge to solve problems in a specific field.  
-        <p class = "p2">1944-1966- ELIZA was created by Joseph Weizenbaum at MIT and was the first AI chatbot created. Although it could barely engage with its user and had zero to no context since there was little to no memory to store the data from the conversations. 
-        <p class = "p2">1966-1972 – Shakey the Robot was created by the researchers at SRI. This was a mobile robot that was able to sense its environment and move around. It could carry out basic tasks like moving from one location from another, turning light switches on and off, and pushing movable objects. It was able to identify objects around it and given a prompt follow the command. This was the first robot to be able to reason with its own actions and  showed AI being able to incorporate both logical reasoning and physical actions.  
-        <p class = "p2">1992- IBM researcher Gerald Tesauro developed TD-Gammon which was a program that used reinforcement learning. It essentially used the game of backgammon, and played against itself to develop strategies, eventually leading to stronger performance in the game. It showed that AI can be developed to have strong performance in a field or game, with given experience which would lead to a later chess AI.
-        <p class = "p2">1997 – May 1997, IBM finished its development on Deep Blue, a chess AI. A test was performed to test the capabilities of Deep Blue. The test: a computer against the world chess champion. The results were that Deep Blue had defeated Garry Kasparov and was able to evaluate 200 million chess positions per second, combining both chess methods and knowledge that it sourced from. This showed that AI can excel in a clearly defined task provided it had the data to perform it. 
-        <p class = "p2">2005- In 2005, Stanford’s robotic vehicle named Stanley completed the DARPA Grand Challenge. This challenge required vehicles to be able to navigate through a desert course without the use of a human driver. This showed the progress made in sensors, navigation, and the use of AI to utilize both to make decisions in a physical environment.  
-        <p class = "p2">2009 – Researcher Fei-Fei Li created ImageNet, which was a large database of images organized into different categories. This large library of images was proposed to have computers be able to train on the images to be able to recognize different objects. This furthered research into a capable image recognition system.
-        <p class = "p2">2012- AlexNet was a neural network developed by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton was able to utilize the ImageNet database to recognize objects using AI. This was achieved by using the data set, Graphics processing units, and training data. This showed that a computer vision with the combination of all 3 can be substantially improved to recognize a given environment. 
-        <p class = "p2">2017- Researchers introduce the Transformer, which was a new neural network design that helped models identify relationships with inputs with different parts of it, for example words being in a sentence. This allowed for parallel processing during AI training which substantially improved efficiency in AI. 
-        <p class = "p2">2020 – Google’s AlphaFold 2 creates accurate results for predicting protein structure of CASP14. Predicting a protein’s three-dimensional structure from its amino-acid sequence posed a challenge for many scientists in the past. This showed how AI could contribute to biological research, and how it can help advance the health field.  
-        <p class = "p2"> 2022- OpenAI releases ChatGPT as a preview. It was the first published chat bot that allowed users to ask questions, be provided with explanations, and receive help for writing/programming. This made generative AI accessible for people across the globe. 
-        <p class = "p2">2023- Models like GPT-4, Gemini, Claude 2, are introduced which were more advanced AI and allowed for more capability for people using AI.  
-        <p class = "p2">2024- Community driven models like Mistral become open source, accelerating experimentation with AI models. 
-          
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curiosity Lab | History of AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <header>
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p class="eyebrow">Temporal Logs & Vector Milestones</p>
+      <h1>History of Artificial Intelligence</h1>
+      <p class="hero-desc">
+        Explore humanity's computational evolution from early logical algorithms to modern multimodal AI systems.
+      </p>
+    </section>
+
+    <section class="modules">
+      <article class="wide" style="--delay: 0.1s;">
+        <h2>Pioneers of Machine Intelligence</h2>
+        <p class="eyebrow" style="margin-top: 8px;">Architect Analysis: Theoretical Foundations & Early Prototypes</p>
+        <p>
+          The bedrock of modern synthetic reasoning was laid by visionary thinkers <strong>Alan Turing</strong> and <strong>Arthur Samuel</strong>.
+        </p>
+        <ul>
+          <li><strong>Alan Turing:</strong> Conceptualized machine learning from experience and created the seminal <em>Turing Test</em>, establishing the ultimate threshold for conversational machine intelligence.</li>
+          <li><strong>Arthur Samuel (1952):</strong> Programmed a checkers agent capable of self-learning through gameplay, demonstrating the world's first practical machine learning framework.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="matrix-stream">
+      <div class="matrix-header">
+        <h2>Historical Event Matrix // 1952 – 2024</h2>
+      </div>
+
+      <div class="matrix-grid">
+        
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #001</span><span class="tag">SYNTHETIC MEMORY</span></div>
+          <h3>1952: "The Shopper"</h3>
+          <p>Anthony Oettinger engineers "The Shopper," a machine memory simulation navigating 8 virtual shops to track inventory and autonomously retrieve target items.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #002</span><span class="tag">NEURAL MATRIX</span></div>
+          <h3>1954: Early Neural Networks</h3>
+          <p>Belmont Farley and Wesley Clark simulate self-organizing computer systems at MIT, training 128-neuron networks to recognize raw visual patterns in memory.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #003</span><span class="tag">SYMBOLIC REASONING</span></div>
+          <h3>1955–1956: Logic Theorist</h3>
+          <p>Allen Newell, Herbert Simon, and J. Clifford Shaw unveil the Logic Theorist, using symbolic logic to prove mathematical theorems from <em>Principia Mathematica</em>.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #004</span><span class="tag">PERCEPTRON CORE</span></div>
+          <h3>1957–1958: The Perceptron</h3>
+          <p>Frank Rosenblatt builds the Perceptron on an IBM 704. By classifying punch card markings, it forged the foundational architecture for computer vision.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #005</span><span class="tag">EXPERT SYSTEM</span></div>
+          <h3>1965: DENDRAL</h3>
+          <p>Stanford researchers construct DENDRAL, an AI capable of mapping organic molecular structures—proving expert system potential in domain-specific science.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #006</span><span class="tag">NLP BOT</span></div>
+          <h3>1964–1966: ELIZA</h3>
+          <p>Joseph Weizenbaum programs ELIZA at MIT, crafting the first natural language chatbot capable of simulating human conversational interactions.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #007</span><span class="tag">ROBOTIC REASONING</span></div>
+          <h3>1966–1972: Shakey the Robot</h3>
+          <p>SRI developers launch Shakey—the world's first mobile robot fusing physical motion, obstacle sensing, and logical command execution.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #008</span><span class="tag">REINFORCEMENT LEARNING</span></div>
+          <h3>1992: TD-Gammon</h3>
+          <p>Gerald Tesauro designs TD-Gammon. Through self-play reinforcement learning, the algorithm developed grandmaster-level strategies autonomously.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #009</span><span class="tag">GRANDMASTER DEFEAT</span></div>
+          <h3>1997: Deep Blue Defeats Kasparov</h3>
+          <p>IBM's Deep Blue calculates 200 million moves per second to defeat World Chess Champion Garry Kasparov in a landmark showcase of raw processing power.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #010</span><span class="tag">AUTONOMOUS DRIVING</span></div>
+          <h3>2005: Stanley Autonomous Vehicle</h3>
+          <p>Stanford's robotic car Stanley wins the DARPA Grand Challenge by navigating 132 desert miles without human intervention.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #011</span><span class="tag">IMAGE DATASET</span></div>
+          <h3>2009: ImageNet Launch</h3>
+          <p>Dr. Fei-Fei Li creates ImageNet, establishing a massive annotated image repository that propelled deep learning and vision training exponentially.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #012</span><span class="tag">GPU ACCELERATION</span></div>
+          <h3>2012: AlexNet Breakthrough</h3>
+          <p>Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton deploy AlexNet, utilizing GPU clusters to ignite the modern deep learning revolution.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #013</span><span class="tag">TRANSFORMER ARCHITECTURE</span></div>
+          <h3>2017: Attention Is All You Need</h3>
+          <p>Google researchers invent the Transformer architecture, replacing recurrent models with parallel attention mechanisms for complex sequential processing.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #014</span><span class="tag">BIOLOGICAL AI</span></div>
+          <h3>2020: AlphaFold 2</h3>
+          <p>DeepMind's AlphaFold 2 solves the 50-year-old protein folding grand challenge, accurately predicting 3D biological protein structures.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #015</span><span class="tag">GENERATIVE AI</span></div>
+          <h3>2022: ChatGPT Deployment</h3>
+          <p>OpenAI releases ChatGPT, democratizing conversational AI and natural language generation for hundreds of millions worldwide.</p>
+        </article>
+
+        <article class="matrix-card">
+          <div class="card-hud"><span>LOG: #016</span><span class="tag">FRONTIER MODELS</span></div>
+          <h3>2023: Multimodal Frontier</h3>
+          <p>GPT-4, Gemini, and Claude 2 emerge, offering multi-sensory reasoning across text, voice, visual recognition, and advanced code synthesis.</p>
+        </article>
+
+        <article class="matrix-card wide-card">
+          <div class="card-hud"><span>LOG: #017</span><span class="tag">OPEN-WEIGHTS</span></div>
+          <h3>2024: Open Source Surge</h3>
+          <p>High-performance open-weights models like Mistral transform AI research, democratizing cutting-edge model deployment for developers globally.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section style="margin-top: 50px; text-align: center;">
+      <a href="Types-of-AI.html" class="nav-btn" style="display: inline-block; padding: 14px 32px; font-weight: bold;">
+        Next Protocol: Types of AI&rarr;
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Curiosity Lab. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

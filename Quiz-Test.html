@@ -1,44 +1,226 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Curiosity Lab | Test your knowledge</title>
-    <link rel="stylesheet" href="styles.css"> 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curiosity Lab | Origins of AI</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
 </head>
-  <body>
-        <body>
-      <a class="brand" href="index.html">Curiosity Lab</a>
-<main>
-    <section>
-      <span class="eyebrow">Curiosity lab learning center</span>
-      <h1>Practice Quiz</h1>
-      <p>Test your knowledge. Learn something new.</p>
-    </section>
-    
-    <section class="quiz">
-      <span class="eyebrow">Question 01</span>
-      <h2>HTML Fundamentals</h2>
-      <p>Test question 1</p>
 
-      <div class="quiz-answers">
-        <input type="radio" name="q1" id="q1a">
-        <label for="q1a">A. Incorrect</label>
+<body>
 
-        <input type="radio" name="q1" id="q1b">
-        <label for="q1b">B. Correct</label>
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
 
-        <input type="radio" name="q1" id="q1c">
-        <label for="q1c">C. Incorrect</label>
+  <header>
 
-        <input type="radio" name="q1" id="q1d">
-        <label for="q1d">D. Incorrect </label>
+    <nav aria-label="Main navigation">
+
+      <a class="brand" href="index.html">
+        Curiosity Lab
+      </a>
+
+      <div>
+        <a class="nav-btn" href="index.html">
+          Home
+        </a>
+
+        <a class="nav-btn" href="HistoryofAI1-2.html">
+          Next Section →
+        </a>
       </div>
 
-       <details>
-        <summary>Reveal answer</summary>
-        <p class="correct">
-        its B bro it says it
+    </nav>
+
+    <p class="eyebrow">
+      Module 01
+    </p>
+
+    <h1>
+      Origins of the Field
+    </h1>
+
+    <p class="hero-desc">
+      Topics covered include the origins of the field,
+      key people and contributions,
+      and a foundational timeline tracing the rise of
+      artificial intelligence.
+    </p>
+
+  </header>
+
+  <main>
+
+    <div class="modules">
+
+      <article class="wide" style="--delay:0.1s;">
+
+        <h2>
+          Origins of Artificial Intelligence
+        </h2>
+
+        <p class="eyebrow" style="margin-top:8px;">
+          Success Criteria: Identify early ideas, key events,
+          and the origin of the term.
         </p>
+
+        <p>
+          In 1950, Alan Turing posed a fundamental question:
+          <em>"Can machines think?"</em>
+          He devised a test for machine intelligence later
+          known as the <strong>Turing Test</strong>.
+          In this test, a human judge engages in natural
+          language conversations with both a human and
+          a machine without knowing which is which.
+          If the evaluator cannot reliably tell the machine
+          from the human, the machine passes.
+        </p>
+
+        <p>
+          In 1956, researchers at the Dartmouth Workshop
+          initiated a project on machine intelligence,
+          officializing the term
+          <strong>"Artificial Intelligence"</strong>.
+          This milestone marked AI as a distinct academic
+          discipline rather than just a theoretical question.
+        </p>
+
+        <p>
+          During the 1960s and 1970s, AI research focused
+          on rule-based logic and structured human knowledge.
+          Researchers believed that providing enough rules and
+          facts would allow machines to reason like humans.
+          However, relying strictly on symbolic logic made it
+          difficult for systems to grasp context, natural
+          language nuance, perception, or self-correction.
+        </p>
+
+      </article>
+
+    </div>
+
+    <section class="quiz" style="margin-top:40px;">
+
+      <div class="quiz-top">
+
+        <span class="eyebrow">
+          QUESTION 01
+        </span>
+
+        <span class="topic">
+          AI HISTORY & FUNDAMENTALS
+        </span>
+
+      </div>
+
+      <h2 class="question">
+        What was the main limitation of AI research during
+        the 1960s–1970s?
+      </h2>
+
+      <div class="quiz-answers">
+
+        <input type="radio" name="q1" id="q1a">
+
+        <label for="q1a">
+          <span class="key">A</span>
+          <span>
+            Computers couldn't hold much data
+          </span>
+        </label>
+
+        <input type="radio" name="q1" id="q1b">
+
+        <label for="q1b">
+          <span class="key">B</span>
+          <span>
+            Relying solely on logic rules made understanding
+            context and language difficult
+          </span>
+        </label>
+
+        <input type="radio" name="q1" id="q1c">
+
+        <label for="q1c">
+          <span class="key">C</span>
+          <span>
+            There was no Turing Test established yet
+          </span>
+        </label>
+
+        <input type="radio" name="q1" id="q1d">
+
+        <label for="q1d">
+          <span class="key">D</span>
+          <span>
+            Scientists believed AI could only perform
+            arithmetic calculations
+          </span>
+        </label>
+
+      </div>
+
+      <details style="margin-top:24px;">
+
+        <summary>
+          Reveal Answer
+        </summary>
+
+        <div class="explain">
+
+          <p class="correct">
+            <strong>Correct Answer: B</strong>
+          </p>
+
+          <p>
+            Early AI models relied heavily on rigid,
+            hand-crafted logic rules, which struggled when
+            handling natural language, context, ambiguity,
+            and human perception.
+          </p>
+
+        </div>
+
       </details>
+
     </section>
+
+    <section
+      style="
+      margin-top:40px;
+      text-align:right;
+    ">
+
+      <a
+        href="HistoryofAI1-2.html"
+        class="nav-btn"
+        style="
+        display:inline-block;
+        padding:12px 28px;
+      ">
+
+        Next: History of AI Part 2 →
+
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+  
