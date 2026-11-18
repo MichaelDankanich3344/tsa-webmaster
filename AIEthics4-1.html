@@ -1,0 +1,104 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Who is responsible for AI decisions?
+  Module 4, lesson 1: accountability.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who is responsible for AI decisions? | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 04: AI ethics</a>, lesson 1 of 3</p>
+      <h1>Who is responsible for AI decisions?</h1>
+      <p class="goal"><strong>Success criteria:</strong> Handle ethical dilemmas about accountability.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure diagram side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Balanced_scale_of_Justice_(blue).svg?width=900" alt="Icon of balanced scales of justice" loading="lazy">
+          <figcaption>Responsibility for AI is shared between the people who build it and the people who use it. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Balanced_scale_of_Justice_(blue).svg">Perhelion (colour by Deu)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+  <p>If AI gets something wrong, it's not just one person's fault. The people who build it should try to make sure it works correctly, but the people using it have to be careful too.</p>
+      <p>AI makes mistakes every day and doesn't always give correct answers, so you can't just trust everything it says. Check things yourself before you use the information.</p>
+    </article>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m4-q1" data-answer="a" aria-labelledby="m4-q1-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m4-q1-title">Who is held responsible for AI decisions?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">The developers and users of the AI system</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">The developers of the AI system</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">The users of the AI system</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">None of the above</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Responsibility is shared: developers should build systems that work correctly, and users should check what AI tells them before acting on it.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="AIToolsandTechniques3-3.html"><span>Previous</span>AI automation</a>
+      <a class="pager-next" href="AIEthics4-2.html" data-complete-lesson="AIEthics4-1"><span>Next lesson</span>Using AI appropriately</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

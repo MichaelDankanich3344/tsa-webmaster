@@ -1,0 +1,185 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Prompt engineering
+  Module 3, lesson 1: writing good prompts and prompting strategies.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompt engineering | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 03: AI tools and techniques</a>, lesson 1 of 3</p>
+      <h1>Prompt engineering</h1>
+      <p class="goal"><strong>Success criteria:</strong> Write clear, effective prompts and recognize common prompting strategies.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <p>Prompt engineering is designing a prompt to guide an AI model toward a more accurate answer. Using the techniques below together helps AI give a better response.</p>
+
+        <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure diagram">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/RAG_diagram.svg?width=900" alt="Diagram showing documents and a user question being combined into one prompt for a language model" loading="lazy">
+          <figcaption>Giving an AI context: extra documents are added to your question before it goes to the model. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:RAG_diagram.svg">Turtlecrown</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+    </article>
+<section class="stream" aria-labelledby="good-prompt">
+      <h2 id="good-prompt">How to write a good prompt</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Formatting</dt>
+          <dd>The format of a prompt affects how the AI interprets it, and different models may work better with different formats: natural-language instructions, bullet points, or structured formats like JSON. Knowing what your model prefers helps you write good prompts.</dd>
+        </div>
+        <div>
+          <dt>Context and examples</dt>
+          <dd>Giving context and examples helps the AI understand the task. If you want a story, describing the theme you're aiming for will help it write a better one.</dd>
+        </div>
+        <div>
+          <dt>Instructions and constraints</dt>
+          <dd>Clearly explain what you want and avoid being vague. Add constraints to keep the AI on track, such as a character limit, a tone, topics to avoid, or things the response must include.</dd>
+        </div>
+        <div>
+          <dt>Defining the output</dt>
+          <dd>Tell the AI how to present its answer: a table, chart, bullet points, numbered list, short summary, step-by-step explanation, JSON or a detailed response.</dd>
+        </div>
+        <div>
+          <dt>Fine-tuning and adapting</dt>
+          <dd>Fine-tuning trains an existing model on a smaller, task-specific dataset to improve it at a certain task. Adapting means giving the AI feedback it can build on to improve its next response.</dd>
+        </div>
+        <div>
+          <dt>Testing and refining</dt>
+          <dd>Prompting is usually a repeat process. Your first prompt probably won't give the result you want, so evaluate the response, find what's missing, and adjust your instructions using the methods above.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m3-q1" data-answer="a" aria-labelledby="m3-q1-title">
+      <p class="quiz-label">Question 1 of 2</p>
+      <h2 class="quiz-question" id="m3-q1-title">What are the six main methods for writing a good prompt?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Context and examples, testing and refining, defining output, formatting, instructions and constraints, and fine-tuning and adapting</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Calling the AI by a special nickname, defining output, formatting, instructions and constraints, and joking with the AI</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Context and examples, testing and refining, insulting the AI, formatting, and fine-tuning and adapting</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">There is no such thing as a &ldquo;good prompt&rdquo;; you just have to experiment</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>These six methods each give the AI clearer direction. Nicknames, jokes and insults don't help the model understand the task.</p>
+    </section>
+
+    <section class="stream" aria-labelledby="strategies">
+      <h2 id="strategies">Prompting strategies</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Zero-shot prompting</dt>
+          <dd>Giving the AI a task with no examples, so it relies on what it already knows. Results tend to be broad. Example: &ldquo;Explain how to do long division.&rdquo;</dd>
+        </div>
+        <div>
+          <dt>Few-shot prompting</dt>
+          <dd>Giving the AI a few examples of the response you want. For instance, show it several product descriptions, then ask it to write another one in the same style.</dd>
+        </div>
+        <div>
+          <dt>Role prompting</dt>
+          <dd>Assigning the AI a role or perspective to shape its answer, like asking it to act as a physicist explaining gravity to a beginner. The skits online of AI talking in internet slang are role prompting too.</dd>
+        </div>
+        <div>
+          <dt>Chain-of-thought prompting</dt>
+          <dd>Encouraging the AI to work through a problem step by step instead of jumping to an answer. It helps with complex, multi-step tasks, like a math problem. Newer models often do this on their own.</dd>
+        </div>
+        <div>
+          <dt>Iterative prompting</dt>
+          <dd>Improving your prompt by using the AI's previous response to see what to change. For example, ask for an essay about global warming, then ask again but make it more emotionally persuasive.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m3-q2" data-answer="c" aria-labelledby="m3-q2-title">
+      <p class="quiz-label">Question 2 of 2</p>
+      <h2 class="quiz-question" id="m3-q2-title">Which of these is an example of role prompting?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">&ldquo;Explain how to do long division.&rdquo;</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">&ldquo;Can you solve this math problem in multiple steps?&rdquo;</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">&ldquo;Can you act like my math teacher and answer this question?&rdquo;</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">&ldquo;Can you explain this concept in simpler terms?&rdquo;</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Role prompting gives the AI a role or persona to take on, such as a teacher or an expert. Option A is zero-shot and option B is chain-of-thought.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="FundamentalConcepts2-3.html"><span>Previous</span>Computer vision</a>
+      <a class="pager-next" href="AIToolsandTechniques3-2.html" data-complete-lesson="AIToolsandTechniques3-1"><span>Next lesson</span>Generative AI</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

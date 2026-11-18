@@ -1,74 +1,136 @@
 <!doctype html>
+<!--
+  Curiosity Lab: References
+  Sources, licenses and required project documentation.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>References | Curiosity Lab</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="circuit" aria-hidden="true">
-      <div class="trace"></div>
-      <div class="trace"><span class="down"></span></div>
-      <div class="trace"><span class="up"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="down"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="up"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="down"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="up"></span></div>
-      <div class="trace"></div>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>References | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-      <a class="brand" href="index.html">Curiosity Lab</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="references.html" aria-current="page">References</a>
-      </nav>
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html" aria-current="page">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <header class="lesson-head">
+      <h1>References and project documentation</h1>
     </header>
 
-    <main>
-      <p class="eyebrow type" style="--n:17; --speed:0.04s">Sources &amp; credits</p>
-      <h1 class="type" style="--n:36; --speed:0.05s; --delay:0.8s">References and project documentation</h1>
+    <section class="stream" aria-labelledby="sources">
+      <h2 id="sources">Learning and development sources</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content">MDN: Creating the content</a>, HTML tutorial used by the team.</li>
+      </ul>
+      <!-- Add every source used for lesson content, code, images, and other assets here. -->
+    </section>
 
-      <div class="modules">
+    <section class="stream" aria-labelledby="images">
+      <h2 id="images">Image credits</h2>
+      <p class="section-intro">All images come from Wikimedia Commons and are in the public domain or under a Creative Commons license. None of them are AI-generated. Images are shown at a smaller size; no other changes were made.</p>
+      <ul class="credits">
+        <li><strong>Turing test diagram (Module 1, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Turing_test_diagram.svg">Schoeneh (based on a diagram by Juan Alberto Sánchez Margallo)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Turing_test_diagram.svg">https://commons.wikimedia.org/wiki/File:Turing_test_diagram.svg</a></li>
+        <li><strong>ELIZA conversation (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">Unknown author</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png</a></li>
+        <li><strong>Shakey the robot (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:SRI_Shakey_robot,_1969,_Computer_History_Museum.jpg">The wub</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:SRI_Shakey_robot,_1969,_Computer_History_Museum.jpg">https://commons.wikimedia.org/wiki/File:SRI_Shakey_robot,_1969,_Computer_History_Museum.jpg</a></li>
+        <li><strong>IBM Deep Blue (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:IBM_Deep_Blue_at_Computer_History_Museum_(9361685537).jpg">Anton Chiang</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:IBM_Deep_Blue_at_Computer_History_Museum_(9361685537).jpg">https://commons.wikimedia.org/wiki/File:IBM_Deep_Blue_at_Computer_History_Museum_(9361685537).jpg</a></li>
+        <li><strong>Stanley autonomous car (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Stanley2.JPG">DARPA (US government photo)</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Stanley2.JPG">https://commons.wikimedia.org/wiki/File:Stanley2.JPG</a></li>
+        <li><strong>Neural network diagram (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg">Glosser.ca</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg">https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg</a></li>
+        <li><strong>Syntax tree (Module 2, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:ParseTree.svg">Stannered</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:ParseTree.svg">https://commons.wikimedia.org/wiki/File:ParseTree.svg</a></li>
+        <li><strong>GPT architecture diagram (Module 2, lesson 3)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg">Marxav (vector version by Mrmw)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg">https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg</a></li>
+        <li><strong>Object detection example (Module 2, lesson 4)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Detected-with-YOLO--Schreibtisch-mit-Objekten.jpg">MTheiler</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Detected-with-YOLO--Schreibtisch-mit-Objekten.jpg">https://commons.wikimedia.org/wiki/File:Detected-with-YOLO--Schreibtisch-mit-Objekten.jpg</a></li>
+        <li><strong>Prompt with added context diagram (Module 3, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:RAG_diagram.svg">Turtlecrown</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:RAG_diagram.svg">https://commons.wikimedia.org/wiki/File:RAG_diagram.svg</a></li>
+        <li><strong>Balanced scales (Module 4, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Balanced_scale_of_Justice_(blue).svg">Perhelion (colour by Deu)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Balanced_scale_of_Justice_(blue).svg">https://commons.wikimedia.org/wiki/File:Balanced_scale_of_Justice_(blue).svg</a></li>
+        <li><strong>Padlock on circuit board (Module 4, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Cybersecurity.png">jaydeep_ (via Pixabay)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Cybersecurity.png">https://commons.wikimedia.org/wiki/File:Cybersecurity.png</a></li>
+        <li><strong>DeepSeek logo (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:DeepSeek%20logo.svg">DeepSeek (logo)</a>, <a href="https://opensource.org/license/mit">MIT License</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:DeepSeek%20logo.svg">https://commons.wikimedia.org/wiki/File:DeepSeek%20logo.svg</a></li>
+        <li><strong>European Parliament building (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:European%20Parliament%20building%20Brussels%203.jpg">Steven Lek</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:European%20Parliament%20building%20Brussels%203.jpg">https://commons.wikimedia.org/wiki/File:European%20Parliament%20building%20Brussels%203.jpg</a></li>
+        <li><strong>Pilot ACE computer (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Pilot%20ACE%20in%20the%20Science%20Museum.JPG">Philafrenzy</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Pilot%20ACE%20in%20the%20Science%20Museum.JPG">https://commons.wikimedia.org/wiki/File:Pilot%20ACE%20in%20the%20Science%20Museum.JPG</a></li>
+        <li><strong>Dartmouth Hall (Module 1, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Dartmouth%20Hall%20-%20Dartmouth%20College%20-%20DSC01608.jpg">Daderot</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Dartmouth%20Hall%20-%20Dartmouth%20College%20-%20DSC01608.jpg">https://commons.wikimedia.org/wiki/File:Dartmouth%20Hall%20-%20Dartmouth%20College%20-%20DSC01608.jpg</a></li>
+        <li><strong>DEC PDP-1 computer (Module 1, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:DEC%20PDP-1%20Minicomputer%20(1959)%20in%20Computer%20History%20Museum.jpg">Marcin Wichary</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:DEC%20PDP-1%20Minicomputer%20(1959)%20in%20Computer%20History%20Museum.jpg">https://commons.wikimedia.org/wiki/File:DEC%20PDP-1%20Minicomputer%20(1959)%20in%20Computer%20History%20Museum.jpg</a></li>
+        <li><strong>IBM 701 console (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:IBM%20701console.jpg">Dan (Flickr)</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:IBM%20701console.jpg">https://commons.wikimedia.org/wiki/File:IBM%20701console.jpg</a></li>
+        <li><strong>EDSAC replica (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:EDSAC%20replica.JPG">Geni</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:EDSAC%20replica.JPG">https://commons.wikimedia.org/wiki/File:EDSAC%20replica.JPG</a></li>
+        <li><strong>Artificial neuron diagram (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:ArtificialNeuronModel%20english.png">Chrislb</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:ArtificialNeuronModel%20english.png">https://commons.wikimedia.org/wiki/File:ArtificialNeuronModel%20english.png</a></li>
+        <li><strong>JOHNNIAC computer (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Johniac%20(411106583).jpg">Adam Schuster</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Johniac%20(411106583).jpg">https://commons.wikimedia.org/wiki/File:Johniac%20(411106583).jpg</a></li>
+        <li><strong>Mark I Perceptron (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Mark%20I%20Perceptron,%20Figure%202%20of%20operator%27s%20manual.png">John C. Hay and Albert E. Murray</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Mark%20I%20Perceptron,%20Figure%202%20of%20operator%27s%20manual.png">https://commons.wikimedia.org/wiki/File:Mark%20I%20Perceptron,%20Figure%202%20of%20operator%27s%20manual.png</a></li>
+        <li><strong>Mass spectrometer (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Mass%20Spectrometer%20Machine%20(NIH%20BioArt%20579).png">NIAID / Ryan Kissinger (NIH BioArt)</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Mass%20Spectrometer%20Machine%20(NIH%20BioArt%20579).png">https://commons.wikimedia.org/wiki/File:Mass%20Spectrometer%20Machine%20(NIH%20BioArt%20579).png</a></li>
+        <li><strong>Backgammon board (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Persian%20Backgammon%20board%20made%20in%20Khatam%20technique.jpg">Nikos Kitsakis</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Persian%20Backgammon%20board%20made%20in%20Khatam%20technique.jpg">https://commons.wikimedia.org/wiki/File:Persian%20Backgammon%20board%20made%20in%20Khatam%20technique.jpg</a></li>
+        <li><strong>MNIST handwritten digits (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:MnistExamples.png">Josef Steppan</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:MnistExamples.png">https://commons.wikimedia.org/wiki/File:MnistExamples.png</a></li>
+        <li><strong>AlexNet diagram (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Alexnet.png">Trebol6</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Alexnet.png">https://commons.wikimedia.org/wiki/File:Alexnet.png</a></li>
+        <li><strong>Transformer architecture (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Transformer,%20full%20architecture.png">dvgodoy</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Transformer,%20full%20architecture.png">https://commons.wikimedia.org/wiki/File:Transformer,%20full%20architecture.png</a></li>
+        <li><strong>Protein structure (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Protein%20FOXC2%20PDB%201d5v.png">Emw</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Protein%20FOXC2%20PDB%201d5v.png">https://commons.wikimedia.org/wiki/File:Protein%20FOXC2%20PDB%201d5v.png</a></li>
+        <li><strong>OpenAI logo (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:OpenAI%202017-22%20logo.svg">OpenAI (logo)</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:OpenAI%202017-22%20logo.svg">https://commons.wikimedia.org/wiki/File:OpenAI%202017-22%20logo.svg</a></li>
+        <li><strong>Google Gemini logo (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Google%20Gemini%20logo.svg">Google (logo)</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Google%20Gemini%20logo.svg">https://commons.wikimedia.org/wiki/File:Google%20Gemini%20logo.svg</a></li>
+        <li><strong>Claude logo (Module 1, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Claude%20AI%20logo.svg">Anthropic (logo)</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Claude%20AI%20logo.svg">https://commons.wikimedia.org/wiki/File:Claude%20AI%20logo.svg</a></li>
+        <li><strong>Credit card chip (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Credit%20Card%20Chip%20(34684294971).jpg">kuhnmi</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Credit%20Card%20Chip%20(34684294971).jpg">https://commons.wikimedia.org/wiki/File:Credit%20Card%20Chip%20(34684294971).jpg</a></li>
+        <li><strong>K-means clustering animation (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:K-means%20convergence.gif">Chire</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:K-means%20convergence.gif">https://commons.wikimedia.org/wiki/File:K-means%20convergence.gif</a></li>
+        <li><strong>Reinforcement learning diagram (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Reinforcement%20learning%20diagram.svg">Megajuice</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Reinforcement%20learning%20diagram.svg">https://commons.wikimedia.org/wiki/File:Reinforcement%20learning%20diagram.svg</a></li>
+        <li><strong>Data center (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:BalticServers%20data%20center.jpg">BalticServers.com</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:BalticServers%20data%20center.jpg">https://commons.wikimedia.org/wiki/File:BalticServers%20data%20center.jpg</a></li>
+        <li><strong>Black box diagram (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Blackbox3D-withGraphs.png">Krauss</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Blackbox3D-withGraphs.png">https://commons.wikimedia.org/wiki/File:Blackbox3D-withGraphs.png</a></li>
+        <li><strong>Overfitting diagram (Module 2, lesson 1)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Overfitting.svg">Chabacano</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Overfitting.svg">https://commons.wikimedia.org/wiki/File:Overfitting.svg</a></li>
+        <li><strong>Amazon Echo Dot (Module 2, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Amazon%20Echo%20Dot%20(virtual%20digital%20assistant)%20with%20normal%20coffee%20mug%20as%20size%20comparison.jpg">Pittigrilli</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Amazon%20Echo%20Dot%20(virtual%20digital%20assistant)%20with%20normal%20coffee%20mug%20as%20size%20comparison.jpg">https://commons.wikimedia.org/wiki/File:Amazon%20Echo%20Dot%20(virtual%20digital%20assistant)%20with%20normal%20coffee%20mug%20as%20size%20comparison.jpg</a></li>
+        <li><strong>Semantic network (Module 2, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:SemanticNetExample.jpg">WillWare</a>, Public domain, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:SemanticNetExample.jpg">https://commons.wikimedia.org/wiki/File:SemanticNetExample.jpg</a></li>
+        <li><strong>Weather app (Module 2, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Iphone-weather-cold.jpg">Paolo Neo</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Iphone-weather-cold.jpg">https://commons.wikimedia.org/wiki/File:Iphone-weather-cold.jpg</a></li>
+        <li><strong>Named entity example (Module 2, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Simple%20NER%20example.png">Arthur-Kunst</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Simple%20NER%20example.png">https://commons.wikimedia.org/wiki/File:Simple%20NER%20example.png</a></li>
+        <li><strong>Yellow pencil (Module 2, lesson 2)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Yellow-pencil.svg">Ice-Dolphin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Yellow-pencil.svg">https://commons.wikimedia.org/wiki/File:Yellow-pencil.svg</a></li>
+        <li><strong>Library bookshelves (Module 2, lesson 3)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Books%20and%20Bookshelves%20in%20Mansueto%20Library.jpg">Micheal Kaluba</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Books%20and%20Bookshelves%20in%20Mansueto%20Library.jpg">https://commons.wikimedia.org/wiki/File:Books%20and%20Bookshelves%20in%20Mansueto%20Library.jpg</a></li>
+        <li><strong>Gradient descent diagram (Module 2, lesson 3)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Gradient%20descent%20arrows.svg">Eviatar Bach</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Gradient%20descent%20arrows.svg">https://commons.wikimedia.org/wiki/File:Gradient%20descent%20arrows.svg</a></li>
+        <li><strong>Thunderbird junk filter (Module 2, lesson 3)</strong>. Image: <a href="https://commons.wikimedia.org/wiki/File:Spam.png">Tarek (UWOMeds wiki)</a>, <a href="https://www.mozilla.org/MPL/1.1/">MPL 1.1</a>, via Wikimedia Commons. Source: <a href="https://commons.wikimedia.org/wiki/File:Spam.png">https://commons.wikimedia.org/wiki/File:Spam.png</a></li>
+        <li><strong>Portrait of Alan Turing (Module 1, lesson 2)</strong>. Supplied by the site author and stored in images/alan-turing.jpg. Source and license: <em>to be added</em>.</li>
+        <li><strong>Portrait of Arthur Samuel (Module 1, lesson 2)</strong>. Supplied by the site author and stored in images/arthur-samuel.jpg. Source and license: <em>to be added</em>.</li>
+        <li><strong>Portrait of Anthony Oettinger (Module 1, lesson 2)</strong>. Supplied by the site author and stored in images/anthony-oettinger.jpg. Source and license: <em>to be added</em>.</li>
+        <li><strong>Portrait of Frank Rosenblatt (Module 1, lesson 2)</strong>. Supplied by the site author, cropped to his face, and stored in images/frank-rosenblatt.jpg. Source and license: <em>to be added</em>.</li>
+        <li><strong>Portrait of Joseph Weizenbaum (Module 1, lesson 2)</strong>. Supplied by the site author and stored in images/joseph-weizenbaum.jpg. Source and license: <em>to be added</em>.</li>
+        <li><strong>Photo of the 1997 Kasparov vs. Deep Blue rematch (Module 1, lesson 2)</strong>. Supplied by the site author and stored in images/kasparov-vs-deep-blue-1997.jpg. Source and license: <em>to be added</em>.</li>
+      </ul>
+    </section>
 
-        <article class="wide" style="--delay:2.8s">
-          <h2 class="type" style="--n:32; --speed:0.03s; --delay:3.1s">Learning and development sources</h2>
-          <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content">MDN: Creating the content</a> — HTML tutorial for the team.</li>
-          </ul>
-          <!-- Add every source used for lesson content, code, images, and other assets here guys. -->
-        </article>
 
-        <article style="--delay:3.2s">
-          <h2 class="type" style="--n:34; --speed:0.03s; --delay:3.5s">Copyright permissions and licenses</h2>
-          <p>Add written permissions or applicable license documentation for outside materials used.</p>
-        </article>
+    <section class="stream" aria-labelledby="checklist">
+      <h2 id="checklist">Student copyright checklist</h2>
+      <p>Pending: attach the completed official PDF, maximum one page.</p>
+    </section>
 
-        <article style="--delay:3.6s">
-          <h2 class="type" style="--n:27; --speed:0.03s; --delay:3.9s">Student Copyright Checklist</h2>
-          <p>Pending: attach the completed official PDF, maximum one page.</p>
-        </article>
+    <section class="stream" aria-labelledby="reflection">
+      <h2 id="reflection">Resources and AI reflection</h2>
+      <p>Pending: attach the completed official PDF, maximum four pages. Include AI assistance used to plan or create this project, including this starter.</p>
+    </section>
 
-        <article style="--delay:4s">
-          <h2 class="type" style="--n:27; --speed:0.03s; --delay:4.3s">Resources and AI Reflection</h2>
-          <p>Pending: attach the completed official PDF, maximum four pages. Include AI assistance used to plan or create this project, including this starter.</p>
-        </article>
 
-        <article style="--delay:4.4s">
-          <h2 class="type" style="--n:12; --speed:0.04s; --delay:4.7s">Technologies</h2>
-          <p>This starter uses HTML, CSS, and a placeholder JavaScript file. Add any frameworks or other resources your team uses.</p>
-        </article>
+  </main>
 
-      </div>
-    </main>
-
-    <footer>
-      <p>Documentation draft · Work in progress</p>
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
 </html>

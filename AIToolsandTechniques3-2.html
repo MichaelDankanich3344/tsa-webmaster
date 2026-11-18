@@ -1,0 +1,161 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Generative AI
+  Module 3, lesson 2: technologies and types of generative AI.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generative AI | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 03: AI tools and techniques</a>, lesson 2 of 3</p>
+      <h1>Generative AI</h1>
+      <p class="goal"><strong>Success criteria:</strong> Understand generative AI and how it works.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <p>Generative AI creates new, original content like text, images, audio or code from a prompt by using patterns it learned from data. It learns from existing datasets, then tries to produce output similar to what it learned, shaped by what the prompt describes.</p>
+    </article>
+<section class="stream" aria-labelledby="gentech">
+      <h2 id="gentech">Key technologies behind generative AI</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Neural networks</dt>
+          <dd>Layers of connected nodes that process input data and learn patterns during training.</dd>
+        </div>
+        <div>
+          <dt>Transformers</dt>
+          <dd>Use a technique called self-attention to understand how the parts of a sequence relate to each other, so the output fits the context.</dd>
+        </div>
+        <div>
+          <dt>Generative adversarial networks (GANs)</dt>
+          <dd>Two neural networks working against each other: a generator creates fake data and a discriminator judges it. Through repeated rounds of feedback, the generator gets better.</dd>
+        </div>
+        <div>
+          <dt>Variational autoencoders (VAEs)</dt>
+          <dd>Create new data from old data. They compress it, rebuild it, then generate new variations on top of it.</dd>
+        </div>
+        <div>
+          <dt>Diffusion models</dt>
+          <dd>Use two processes. Forward diffusion slowly adds noise to training data until it is pure noise. Reverse diffusion starts from random noise and gradually removes it to create a new image or other output.</dd>
+        </div>
+        <div>
+          <dt>Large language models (LLMs)</dt>
+          <dd>Models that use neural networks trained on text to understand and generate human-like language. They can answer questions, write code and translate.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m3-q3" data-answer="a" aria-labelledby="m3-q3-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m3-q3-title">Which technology uses two neural networks, a generator and a discriminator?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Generative adversarial networks (GANs)</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Variational autoencoders (VAEs)</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Transformers</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Large language models (LLMs)</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>GANs pair a generator that makes data with a discriminator that judges it. The competition between them improves the generator.</p>
+    </section>
+
+    <section class="stream" aria-labelledby="types">
+      <h2 id="types">Types of generative AI</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Text generation</dt>
+          <dd>Generates text to answer questions, summarize articles, write documents and more.</dd>
+        </div>
+        <div>
+          <dt>Image creation</dt>
+          <dd>Generates images, such as logos, artwork and illustrations, from a prompt.</dd>
+        </div>
+        <div>
+          <dt>Video making</dt>
+          <dd>Generates videos from a prompt, or edits existing clips.</dd>
+        </div>
+        <div>
+          <dt>3D design</dt>
+          <dd>Creates 3D models or environments. A game developer could ask for a sword model, or a home seller could turn photos into a virtual walkthrough of the house.</dd>
+        </div>
+        <div>
+          <dt>Code writing</dt>
+          <dd>Writes code, debugs it, explains it and optimizes existing code.</dd>
+        </div>
+        <div>
+          <dt>Audio and music</dt>
+          <dd>Creates music, sound effects, speech and voices.</dd>
+        </div>
+        <div>
+          <dt>Customer service</dt>
+          <dd>Many websites add an AI assistant that answers questions about their business. Amazon, for example, has one that answers product questions and summarizes reviews.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="AIToolsandTechniques3-1.html"><span>Previous</span>Prompt engineering</a>
+      <a class="pager-next" href="AIToolsandTechniques3-3.html" data-complete-lesson="AIToolsandTechniques3-2"><span>Next lesson</span>AI automation</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

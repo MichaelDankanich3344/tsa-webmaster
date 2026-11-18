@@ -1,0 +1,99 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Bias in AI
+  Module 4, lesson 3: bias. The next link leads to the final knowledge check.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bias in AI | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 04: AI ethics</a>, lesson 3 of 3</p>
+      <h1>Bias in AI</h1>
+      <p class="goal"><strong>Success criteria:</strong> Handle ethical dilemmas about bias.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <p>AI is now part of daily life, from cars to phones. But it isn't perfect: because it learns from data made by people, it can pick up one-sided patterns in areas like hiring, loans or facial recognition.</p>
+      <p>These biases can be hard to notice, because AI usually answers in a confident, neutral tone. That can lead people to believe something false about a topic. Always double-check the sources and information an AI gives you.</p>
+    </article>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m4-q3" data-answer="c" aria-labelledby="m4-q3-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m4-q3-title">What is bias in AI?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">AI does not have bias and creates randomly generated content</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">AI is designed to be completely neutral in its decision-making process</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">A systematic favoring of certain outcomes over others in AI decision-making</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">AI is not capable of exhibiting bias in its decision-making</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Bias in AI is a systematic favoring of certain outcomes over others, often learned from one-sided training data.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="AIEthics4-2.html"><span>Previous</span>Using AI appropriately</a>
+      <a class="pager-next" href="quiz-test.html" data-complete-lesson="AIEthics4-3"><span>Finish the course</span>Knowledge check</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

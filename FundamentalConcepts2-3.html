@@ -1,0 +1,120 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Computer vision
+  Module 2, lesson 4: image recognition vs object detection.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Computer vision | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 02: Fundamental concepts</a>, lesson 4 of 4</p>
+      <h1>Computer vision</h1>
+      <p class="goal"><strong>Success criteria:</strong> Understand what computer vision, image recognition and object detection are.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <p>Computer vision lets computers look at photos and videos and understand them. Humans use their eyes and brains to spot objects; computer vision uses cameras, image data and AI models to do the same.</p>
+
+      <h2>Image recognition</h2>
+      <p>Image recognition (also called image classification) looks at a whole image and puts it into a category. Examples include:</p>
+      <ul>
+        <li>Deciding if an image shows a cat or a dog</li>
+        <li>Recognizing kinds of plants</li>
+        <li>Reading handwritten numbers</li>
+      </ul>
+
+      <h2>Object detection</h2>
+      <p>Object detection finds which objects are in an image and marks where they are. It usually draws boxes around them called <strong>bounding boxes</strong>, and each detected object gets its own label and box. Examples include:</p>
+      <ul>
+        <li>Spotting cars, bicycles and people in traffic</li>
+        <li>Detecting products on a conveyor belt</li>
+        <li>Finding animals in wildlife footage</li>
+      </ul>
+
+        <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Detected-with-YOLO--Schreibtisch-mit-Objekten.jpg?width=900" alt="Photo of a desk where an object detector has drawn labelled boxes around a laptop, cup, keyboard and other items" loading="lazy">
+          <figcaption>Object detection in action: the YOLO model drew a labelled bounding box around each object on this desk. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Detected-with-YOLO--Schreibtisch-mit-Objekten.jpg">MTheiler</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+    </article>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m2-q3" data-answer="b" aria-labelledby="m2-q3-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m2-q3-title">An AI draws a box around every car and person in a traffic photo. What is it doing?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Image classification</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Object detection</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Natural language processing</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Reinforcement learning</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Object detection finds each object, labels it and marks where it is with a bounding box. Image classification gives just one label for the whole picture.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="FundamentalConcepts2-2-2.html"><span>Previous</span>Training AI with language</a>
+      <a class="pager-next" href="AIToolsandTechniques3-1.html" data-complete-lesson="FundamentalConcepts2-3"><span>Next module</span>Module 3: Prompt engineering</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

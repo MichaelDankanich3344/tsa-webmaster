@@ -1,0 +1,150 @@
+<!doctype html>
+<!--
+  Curiosity Lab: AI automation
+  Module 3, lesson 3: automation tools and where they're used.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI automation | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 03: AI tools and techniques</a>, lesson 3 of 3</p>
+      <h1>AI automation</h1>
+      <p class="goal"><strong>Success criteria:</strong> Understand AI automation and how it's used in the workplace today.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <p>AI automation means using AI to complete tasks automatically. It can boost efficiency by handling repetitive work, or help with almost any task we want done. For instance, some businesses now use AI to interview job applicants instead of having a person do it.</p>
+    </article>
+<section class="stream" aria-labelledby="tools">
+      <h2 id="tools">Kinds of automation tools</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Task automation</dt>
+          <dd>Handles routine work like sorting emails and scheduling.</dd>
+        </div>
+        <div>
+          <dt>Decision automation</dt>
+          <dd>Makes or recommends decisions based on data: detecting fraud, forecasting demand or setting prices that change with demand.</dd>
+        </div>
+        <div>
+          <dt>Cognitive automation</dt>
+          <dd>Interprets languages and documents, for summarizing and translating.</dd>
+        </div>
+        <div>
+          <dt>Autonomous systems</dt>
+          <dd>Do all of the above with little or no human involvement, as in self-driving cars, warehouse robots, drones and trading agents.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="stream" aria-labelledby="fields">
+      <h2 id="fields">Where AI automation is used</h2>
+      <p class="section-intro">AI is used in many other fields too. These are just a few examples.</p>
+      <dl class="concept-grid">
+        <div>
+          <dt>Financial services</dt>
+          <dd>Detects fraud and monitors transactions to flag suspicious activity, improving security and reducing losses.</dd>
+        </div>
+        <div>
+          <dt>Healthcare</dt>
+          <dd>Helps with diagnosis and analyzes patient data to suggest better-informed treatment options.</dd>
+        </div>
+        <div>
+          <dt>Construction</dt>
+          <dd>Helps manage the resources a project needs and watches the site for hazards to workers.</dd>
+        </div>
+        <div>
+          <dt>Manufacturing</dt>
+          <dd>Analyzes data to recommend efficient orders and track inventory.</dd>
+        </div>
+        <div>
+          <dt>Human resources</dt>
+          <dd>Scans resumes to find people who might fit a job, and runs mock interviews where the interviewer is an AI.</dd>
+        </div>
+        <div>
+          <dt>Software development</dt>
+          <dd>Optimizes code, handles repetitive tasks and explains sections of code.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m3-q4" data-answer="d" aria-labelledby="m3-q4-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m3-q4-title">Which of these fields was NOT one of the examples in this lesson?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Healthcare</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Construction</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Manufacturing</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Counseling and therapy</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Healthcare, construction and manufacturing were all covered above. AI tools are starting to appear in mental health too, but counseling wasn't one of this lesson's examples.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="AIToolsandTechniques3-2.html"><span>Previous</span>Generative AI</a>
+      <a class="pager-next" href="AIEthics4-1.html" data-complete-lesson="AIToolsandTechniques3-3"><span>Next module</span>Module 4: Who is responsible for AI decisions?</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

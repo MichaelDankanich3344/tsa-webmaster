@@ -1,0 +1,125 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Training AI with language
+  Module 2, lesson 3: next-token prediction, the training loop, pre- and post-training.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training AI with language | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 02: Fundamental concepts</a>, lesson 3 of 4</p>
+      <h1>Training AI with language</h1>
+      <p class="goal"><strong>Success criteria:</strong> Understand how language models are trained and where NLP is used.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <p>An AI model doesn't know a language on its own. Instead, it's trained on huge collections of text as well as individual examples. Training lets the model learn the typical relationships between words, sentences and concepts.</p>
+      <p>Training is how people teach an AI model to spot patterns. The model is shown examples of data, then changed based on how well it did. This repeats until the model becomes good at recognizing patterns. The training data includes:</p>
+      <ul>
+        <li>Books and articles</li>
+        <li>Websites</li>
+        <li>Educational materials such as textbooks</li>
+      </ul>
+      <p><strong>Next-token prediction</strong> is a common training method. The model learns to predict which token (a word or piece of a word) should come next based on the text before it. Doing this over and over helps the system learn the patterns of language.</p>
+
+        <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Books%20and%20Bookshelves%20in%20Mansueto%20Library.jpg?width=900" alt="Tall shelves full of books in a library" loading="lazy">
+          <figcaption>Language models learn from huge amounts of text, including books and articles. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Books%20and%20Bookshelves%20in%20Mansueto%20Library.jpg">Micheal Kaluba</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+    </article>
+<section class="stream" aria-labelledby="loop">
+      <h2 id="loop">The training loop</h2>
+      <p class="section-intro">These three steps repeat millions of times.</p>
+      <ol class="steps">
+        <li><strong>Prediction.</strong> The model predicts the next token.</li>
+        <li><strong>Evaluation.</strong> The training system measures how wrong the prediction was.</li>
+        <li><strong>Adjustment.</strong> The model's internal weights are adjusted to improve future predictions.</li>
+      </ol>
+
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+      <figure class="figure diagram side">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gradient%20descent%20arrows.svg?width=900" alt="Contour map with arrows stepping toward the lowest point" loading="lazy">
+        <figcaption>Each loop nudges the model's weights “downhill” toward less error, like these arrows. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Gradient%20descent%20arrows.svg">Eviatar Bach</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="stream" aria-labelledby="phases">
+      <h2 id="phases">Two phases of training</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Pre-training</dt>
+          <dd>The model learns general language patterns from large amounts of text, including grammar, vocabulary and relationships between words.</dd>
+        </div>
+        <div>
+          <dt>Post-training</dt>
+          <dd>The model is trained further to follow instructions and give more useful responses. Two common techniques:<ul><li><strong>Supervised fine-tuning (SFT):</strong> learning from examples of instructions and good responses.</li><li><strong>Reinforcement learning from human feedback (RLHF):</strong> using people's ratings to encourage more helpful and appropriate responses.</li></ul></dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="stream" aria-labelledby="uses">
+      <h2 id="uses">Real-world applications</h2>
+      
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+      <figure class="figure diagram side">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Spam.png?width=900" alt="Screenshot of the Thunderbird email app marking messages as junk" loading="lazy">
+        <figcaption>Email apps use text analysis to filter spam, like Thunderbird's junk filter here. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Spam.png">Tarek (UWOMeds wiki)</a>, <a href="https://www.mozilla.org/MPL/1.1/">MPL 1.1</a>, via Wikimedia Commons</span></figcaption>
+      </figure>
+<p>NLP is used in everyday tools such as ChatGPT, Siri and Alexa to answer questions, and in customer service chatbots. Businesses also use it to sort through thousands of reviews and to filter spam email.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="FundamentalConcepts2-2.html"><span>Previous</span>Natural language processing</a>
+      <a class="pager-next" href="FundamentalConcepts2-3.html" data-complete-lesson="FundamentalConcepts2-2-2"><span>Next lesson</span>Computer vision</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>
