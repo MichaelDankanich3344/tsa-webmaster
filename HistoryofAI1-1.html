@@ -1,0 +1,123 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Origins of artificial intelligence
+  Module 1, lesson 1: Turing, Dartmouth and rule-based AI.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Origins of artificial intelligence | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 01: History of AI</a>, lesson 1 of 2</p>
+      <h1>Origins of artificial intelligence</h1>
+      <p class="goal"><strong>Success criteria:</strong> Identify early ideas, key events, and the origin of the term.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <h2>Can machines think?</h2>
+      <p>In 1950, Alan Turing posed a fundamental question: <em>&ldquo;Can machines think?&rdquo;</em> He devised a test for machine intelligence later known as the <strong>Turing Test</strong>. In this test, a human judge has natural language conversations with both a human and a machine without knowing which is which. If the judge cannot reliably tell the machine from the human, the machine passes.</p>
+
+        <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure diagram">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Turing_test_diagram.svg?width=900" alt="Diagram of the Turing test: a judge types to a hidden human and a hidden computer" loading="lazy">
+          <figcaption>The Turing test: a judge chats with a hidden person and a hidden computer and tries to tell which is which. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Turing_test_diagram.svg">Schoeneh (based on a diagram by Juan Alberto Sánchez Margallo)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+
+      <h2>Naming the field</h2>
+    
+        <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dartmouth%20Hall%20-%20Dartmouth%20College%20-%20DSC01608.jpg?width=900" alt="Dartmouth Hall, a long white colonial building with a central cupola" loading="lazy">
+          <figcaption>Dartmouth Hall at Dartmouth College in New Hampshire, where the 1956 workshop named the field. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Dartmouth%20Hall%20-%20Dartmouth%20College%20-%20DSC01608.jpg">Daderot</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+  <p>In 1956, researchers at the Dartmouth Workshop started a project on machine intelligence and made the term <strong>&ldquo;artificial intelligence&rdquo;</strong> official. This milestone marked AI as a distinct academic discipline rather than just a theoretical question.</p>
+
+      <h2>Rules and logic</h2>
+    
+        <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/DEC%20PDP-1%20Minicomputer%20(1959)%20in%20Computer%20History%20Museum.jpg?width=900" alt="A DEC PDP-1 computer: tall blue cabinet with switches next to a desk with a typewriter" loading="lazy">
+          <figcaption>A DEC PDP-1 from 1959, the kind of computer AI labs such as MIT's used in the early 1960s. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:DEC%20PDP-1%20Minicomputer%20(1959)%20in%20Computer%20History%20Museum.jpg">Marcin Wichary</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+  <p>During the 1960s and 1970s, AI research focused on rule-based logic and structured human knowledge. Researchers believed that providing enough rules and facts would allow machines to reason like humans. However, relying strictly on symbolic logic made it difficult for systems to grasp context, the nuance of natural language, perception, or self-correction.</p>
+    </article>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m1-q1" data-answer="b" aria-labelledby="m1-q1-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m1-q1-title">What was the main limitation of AI research during the 1960s&ndash;1970s?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Computers couldn't hold much data</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Relying solely on logic rules made understanding context and language difficult</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">There was no Turing Test established yet</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Scientists believed AI could only perform arithmetic calculations</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Early AI relied on rigid, hand-written logic rules, which struggled with natural language, context, ambiguity and human perception.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="index.html"><span>Previous</span>Course home</a>
+      <a class="pager-next" href="HistoryofAI1-2.html" data-complete-lesson="HistoryofAI1-1"><span>Next lesson</span>Timeline of AI</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

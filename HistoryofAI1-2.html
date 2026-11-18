@@ -1,13 +1,23 @@
 <!doctype html>
+<!--
+  Curiosity Lab: Timeline of AI
+  Module 1, lesson 2: pioneers and a timeline of milestones.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Curiosity Lab | History of AI</title>
+  <title>Timeline of AI | Curiosity Lab</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
 </head>
 <body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
   <div class="circuit" aria-hidden="true">
     <div class="trace"></div>
     <div class="trace"><span class="down"></span></div>
@@ -23,159 +33,325 @@
     <div class="trace"></div>
   </div>
 
-  <header>
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
     <a class="brand" href="index.html">Curiosity Lab</a>
-    <nav aria-label="Main navigation">
+    <nav class="site-nav" aria-label="Main">
       <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
       <a href="references.html">References</a>
     </nav>
   </header>
 
-  <main>
-    <section>
-      <p class="eyebrow">Temporal Logs & Vector Milestones</p>
-      <h1>History of Artificial Intelligence</h1>
-      <p class="hero-desc">
-        Explore humanity's computational evolution from early logical algorithms to modern multimodal AI systems.
-      </p>
-    </section>
+  <main id="main" class="lesson">
 
-    <section class="modules">
-      <article class="wide" style="--delay: 0.1s;">
-        <h2>Pioneers of Machine Intelligence</h2>
-        <p class="eyebrow" style="margin-top: 8px;">Architect Analysis: Theoretical Foundations & Early Prototypes</p>
-        <p>
-          The bedrock of modern synthetic reasoning was laid by visionary thinkers <strong>Alan Turing</strong> and <strong>Arthur Samuel</strong>.
-        </p>
-        <ul>
-          <li><strong>Alan Turing:</strong> Conceptualized machine learning from experience and created the seminal <em>Turing Test</em>, establishing the ultimate threshold for conversational machine intelligence.</li>
-          <li><strong>Arthur Samuel (1952):</strong> Programmed a checkers agent capable of self-learning through gameplay, demonstrating the world's first practical machine learning framework.</li>
-        </ul>
-      </article>
-    </section>
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 01: History of AI</a>, lesson 2 of 2</p>
+      <h1>Timeline of AI</h1>
+      <p class="goal"><strong>Success criteria:</strong> Recognize the key people and milestones that shaped AI, from early logic programs to today's models.</p>
+    </header>
 
-    <section class="matrix-stream">
-      <div class="matrix-header">
-        <h2>Historical Event Matrix // 1952 – 2024</h2>
+    <!-- Lesson text -->
+    <article class="panel">
+      <h2>Pioneers of machine intelligence</h2>
+      <p>Two early pioneers laid the groundwork for machines that learn.</p>
+      <div class="people">
+        <div>
+          <figure class="card-fig"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pilot%20ACE%20in%20the%20Science%20Museum.JPG?width=600" alt="The Pilot ACE computer, rows of metal racks and valves, in a museum display" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Pilot%20ACE%20in%20the%20Science%20Museum.JPG">Philafrenzy</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons</figcaption></figure>
+          <!-- Portrait supplied by the site author, stored locally in images/ -->
+          <div class="person-head">
+            <img class="avatar" src="images/alan-turing.jpg" alt="Black and white portrait of Alan Turing">
+            <h3>Alan Turing</h3>
+          </div>
+          <p>Imagined machines that learn from experience and created the Turing Test, a way to judge whether a machine's conversation can pass as human.</p>
+          <p class="portrait-credit">Portrait: source to be added (see References).</p>
+        </div>
+        <div>
+          <figure class="card-fig"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/IBM%20701console.jpg?width=600" alt="The IBM 701 operator's console, a panel covered in rows of switches and lights" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:IBM%20701console.jpg">Dan (Flickr)</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons</figcaption></figure>
+          <!-- Portrait supplied by the site author, stored locally in images/ -->
+          <div class="person-head">
+            <img class="avatar" src="images/arthur-samuel.jpg" alt="Black and white portrait of Arthur Samuel">
+            <h3>Arthur Samuel, 1952</h3>
+          </div>
+          <p>Wrote a checkers program that improved by playing games, one of the first working examples of machine learning.</p>
+          <p class="portrait-credit">Portrait: source to be added (see References).</p>
+        </div>
       </div>
 
-      <div class="matrix-grid">
-        
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #001</span><span class="tag">SYNTHETIC MEMORY</span></div>
-          <h3>1952: "The Shopper"</h3>
-          <p>Anthony Oettinger engineers "The Shopper," a machine memory simulation navigating 8 virtual shops to track inventory and autonomously retrieve target items.</p>
-        </article>
+      <h2>Milestones, 1952&ndash;2026</h2>
+      <!-- Timeline: year on the left, event on the right (styles.css, section 5) -->
+      <ol class="timeline">
+        <li>
+          <span class="year">1952</span>
+          <div class="event">
+            <div class="person-head">
+              <img class="avatar" src="images/anthony-oettinger.jpg" alt="Portrait of Anthony Oettinger">
+              <h3>&ldquo;The Shopper&rdquo;</h3>
+            </div>
+            <p>Anthony Oettinger writes &ldquo;The Shopper,&rdquo; a program that remembers what eight virtual shops sell and goes back to find a requested item.</p>
+            <p class="portrait-credit">Portrait of Anthony Oettinger: source to be added (see References).</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/EDSAC%20replica.JPG?width=900" alt="Racks of vacuum tubes in a rebuilt EDSAC computer" loading="lazy">
+              <figcaption>A replica of Cambridge's EDSAC computer, which ran The Shopper. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:EDSAC%20replica.JPG">Geni</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #002</span><span class="tag">NEURAL MATRIX</span></div>
-          <h3>1954: Early Neural Networks</h3>
-          <p>Belmont Farley and Wesley Clark simulate self-organizing computer systems at MIT, training 128-neuron networks to recognize raw visual patterns in memory.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1954</span>
+          <div class="event">
+            <h3>Early neural networks</h3>
+            <p>Belmont Farley and Wesley Clark at MIT simulate a network of up to 128 artificial neurons and train it to recognize simple patterns.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ArtificialNeuronModel%20english.png?width=900" alt="Diagram of one artificial neuron: weighted inputs are summed and passed through an activation function" loading="lazy">
+              <figcaption>One artificial neuron: inputs are weighted, added up, then passed through an activation function. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:ArtificialNeuronModel%20english.png">Chrislb</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #003</span><span class="tag">SYMBOLIC REASONING</span></div>
-          <h3>1955–1956: Logic Theorist</h3>
-          <p>Allen Newell, Herbert Simon, and J. Clifford Shaw unveil the Logic Theorist, using symbolic logic to prove mathematical theorems from <em>Principia Mathematica</em>.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1955&ndash;56</span>
+          <div class="event">
+            <h3>Logic Theorist</h3>
+            <p>Allen Newell, Herbert Simon and J. Clifford Shaw create the Logic Theorist, which uses symbolic logic to prove theorems from <em>Principia Mathematica</em>.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Johniac%20(411106583).jpg?width=900" alt="The JOHNNIAC computer, a large cabinet with panels and wiring, at a museum" loading="lazy">
+              <figcaption>JOHNNIAC, the RAND computer the Logic Theorist ran on. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Johniac%20(411106583).jpg">Adam Schuster</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #004</span><span class="tag">PERCEPTRON CORE</span></div>
-          <h3>1957–1958: The Perceptron</h3>
-          <p>Frank Rosenblatt builds the Perceptron on an IBM 704. By classifying punch card markings, it forged the foundational architecture for computer vision.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1957&ndash;58</span>
+          <div class="event">
+            <div class="person-head">
+              <img class="avatar" src="images/frank-rosenblatt.jpg" alt="Portrait of Frank Rosenblatt">
+              <h3>The Perceptron</h3>
+            </div>
+            <p>Frank Rosenblatt builds the Perceptron on an IBM 704. It learns to classify markings on punch cards, an early step toward computer vision.</p>
+            <p class="portrait-credit">Portrait of Frank Rosenblatt: source to be added (see References).</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mark%20I%20Perceptron,%20Figure%202%20of%20operator%27s%20manual.png?width=900" alt="Black and white labelled photo of the Mark I Perceptron machine with its camera and patch board" loading="lazy">
+              <figcaption>The Mark I Perceptron, from its 1960 operator's manual. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Mark%20I%20Perceptron,%20Figure%202%20of%20operator%27s%20manual.png">John C. Hay and Albert E. Murray</a>, Public domain, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #005</span><span class="tag">EXPERT SYSTEM</span></div>
-          <h3>1965: DENDRAL</h3>
-          <p>Stanford researchers construct DENDRAL, an AI capable of mapping organic molecular structures—proving expert system potential in domain-specific science.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1964&ndash;66</span>
+          <div class="event">
+            <div class="person-head">
+              <img class="avatar" src="images/joseph-weizenbaum.jpg" alt="Portrait of Joseph Weizenbaum">
+              <h3>ELIZA</h3>
+            </div>
+            <p>Joseph Weizenbaum programs ELIZA at MIT, one of the first chatbots to simulate a human conversation.</p>
+            <p class="portrait-credit">Portrait of Joseph Weizenbaum: source to be added (see References).</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ELIZA_conversation.png?width=900" alt="Green text on a black screen showing a conversation with the ELIZA chatbot" loading="lazy">
+              <figcaption>A conversation with ELIZA, one of the first chatbots. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png">Unknown author</a>, Public domain, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #006</span><span class="tag">NLP BOT</span></div>
-          <h3>1964–1966: ELIZA</h3>
-          <p>Joseph Weizenbaum programs ELIZA at MIT, crafting the first natural language chatbot capable of simulating human conversational interactions.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1965</span>
+          <div class="event">
+            <h3>DENDRAL</h3>
+            <p>Stanford researchers build DENDRAL, an expert system that helps identify the structure of organic molecules.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mass%20Spectrometer%20Machine%20(NIH%20BioArt%20579).png?width=900" alt="Illustration of a mass spectrometer instrument" loading="lazy">
+              <figcaption>A mass spectrometer. DENDRAL figured out the structure of molecules from this kind of machine's measurements. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Mass%20Spectrometer%20Machine%20(NIH%20BioArt%20579).png">NIAID / Ryan Kissinger (NIH BioArt)</a>, Public domain, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #007</span><span class="tag">ROBOTIC REASONING</span></div>
-          <h3>1966–1972: Shakey the Robot</h3>
-          <p>SRI developers launch Shakey—the world's first mobile robot fusing physical motion, obstacle sensing, and logical command execution.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1966&ndash;72</span>
+          <div class="event">
+            <h3>Shakey the Robot</h3>
+            <p>SRI develops Shakey, the first mobile robot to combine movement, sensing obstacles and planning its own actions.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/SRI_Shakey_robot,_1969,_Computer_History_Museum.jpg?width=900" alt="Shakey the robot, a tall boxy robot with a camera on top, in a museum case" loading="lazy">
+              <figcaption>Shakey the robot on display at the Computer History Museum. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:SRI_Shakey_robot,_1969,_Computer_History_Museum.jpg">The wub</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #008</span><span class="tag">REINFORCEMENT LEARNING</span></div>
-          <h3>1992: TD-Gammon</h3>
-          <p>Gerald Tesauro designs TD-Gammon. Through self-play reinforcement learning, the algorithm developed grandmaster-level strategies autonomously.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1992</span>
+          <div class="event">
+            <h3>TD-Gammon</h3>
+            <p>Gerald Tesauro's TD-Gammon learns backgammon by playing against itself (reinforcement learning) and reaches the level of top human players.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Persian%20Backgammon%20board%20made%20in%20Khatam%20technique.jpg?width=900" alt="An inlaid wooden backgammon board" loading="lazy">
+              <figcaption>A backgammon board. TD-Gammon learned the game by playing against itself. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Persian%20Backgammon%20board%20made%20in%20Khatam%20technique.jpg">Nikos Kitsakis</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #009</span><span class="tag">GRANDMASTER DEFEAT</span></div>
-          <h3>1997: Deep Blue Defeats Kasparov</h3>
-          <p>IBM's Deep Blue calculates 200 million moves per second to defeat World Chess Champion Garry Kasparov in a landmark showcase of raw processing power.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">1997</span>
+          <div class="event">
+            <h3>Deep Blue beats Kasparov</h3>
+            <p>IBM's Deep Blue, evaluating about 200 million chess positions per second, defeats world champion Garry Kasparov.</p>
+            <!-- Photo supplied by the site author, stored locally in images/ -->
+            <figure class="figure timeline-fig">
+              <img src="images/kasparov-vs-deep-blue-1997.jpg" alt="Garry Kasparov studies a chessboard during his 1997 rematch against IBM's Deep Blue" loading="lazy">
+              <figcaption>Kasparov during the 1997 rematch against Deep Blue. <span class="credit">Photo: source to be added (see References).</span></figcaption>
+            </figure>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/IBM_Deep_Blue_at_Computer_History_Museum_(9361685537).jpg?width=900" alt="A tall black IBM computer cabinet labelled Deep Blue in a museum" loading="lazy">
+              <figcaption>One of the two Deep Blue cabinets, now at the Computer History Museum. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:IBM_Deep_Blue_at_Computer_History_Museum_(9361685537).jpg">Anton Chiang</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #010</span><span class="tag">AUTONOMOUS DRIVING</span></div>
-          <h3>2005: Stanley Autonomous Vehicle</h3>
-          <p>Stanford's robotic car Stanley wins the DARPA Grand Challenge by navigating 132 desert miles without human intervention.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2005</span>
+          <div class="event">
+            <h3>Stanley</h3>
+            <p>Stanford's self-driving car Stanley wins the DARPA Grand Challenge, driving 132 miles of desert with no human help.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Stanley2.JPG?width=900" alt="Stanford's Stanley, a blue Volkswagen SUV covered in sensors, driving in the desert" loading="lazy">
+              <figcaption>Stanley during the 2005 DARPA Grand Challenge. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Stanley2.JPG">DARPA (US government photo)</a>, Public domain, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #011</span><span class="tag">IMAGE DATASET</span></div>
-          <h3>2009: ImageNet Launch</h3>
-          <p>Dr. Fei-Fei Li creates ImageNet, establishing a massive annotated image repository that propelled deep learning and vision training exponentially.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2009</span>
+          <div class="event">
+            <h3>ImageNet</h3>
+            <p>Fei-Fei Li's team releases ImageNet, a huge labeled image dataset that pushed deep learning and computer vision forward.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/MnistExamples.png?width=900" alt="A grid of handwritten digits from 0 to 9" loading="lazy">
+              <figcaption>Labeled handwritten digits from MNIST, an earlier and much smaller image dataset. ImageNet did the same with millions of labeled photos. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:MnistExamples.png">Josef Steppan</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #012</span><span class="tag">GPU ACCELERATION</span></div>
-          <h3>2012: AlexNet Breakthrough</h3>
-          <p>Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton deploy AlexNet, utilizing GPU clusters to ignite the modern deep learning revolution.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2012</span>
+          <div class="event">
+            <h3>AlexNet</h3>
+            <p>Alex Krizhevsky, Ilya Sutskever and Geoffrey Hinton train AlexNet on GPUs and win the ImageNet challenge by a wide margin, starting the deep learning boom.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Alexnet.png?width=900" alt="Block diagram of AlexNet's layers from input image to output" loading="lazy">
+              <figcaption>AlexNet's layers: convolution layers find features in an image, then fully connected layers decide what it shows. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Alexnet.png">Trebol6</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #013</span><span class="tag">TRANSFORMER ARCHITECTURE</span></div>
-          <h3>2017: Attention Is All You Need</h3>
-          <p>Google researchers invent the Transformer architecture, replacing recurrent models with parallel attention mechanisms for complex sequential processing.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2017</span>
+          <div class="event">
+            <h3>The Transformer</h3>
+            <p>Google researchers publish &ldquo;Attention Is All You Need,&rdquo; introducing the Transformer architecture used by today's language models.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Transformer,%20full%20architecture.png?width=900" alt="Diagram of the Transformer architecture with encoder and decoder stacks" loading="lazy">
+              <figcaption>The Transformer architecture from “Attention Is All You Need.” <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Transformer,%20full%20architecture.png">dvgodoy</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #014</span><span class="tag">BIOLOGICAL AI</span></div>
-          <h3>2020: AlphaFold 2</h3>
-          <p>DeepMind's AlphaFold 2 solves the 50-year-old protein folding grand challenge, accurately predicting 3D biological protein structures.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2020</span>
+          <div class="event">
+            <h3>AlphaFold 2</h3>
+            <p>DeepMind's AlphaFold 2 predicts 3D protein structures with high accuracy, a problem biologists had worked on for 50 years.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Protein%20FOXC2%20PDB%201d5v.png?width=900" alt="Ribbon drawing of a folded protein" loading="lazy">
+              <figcaption>A protein's folded 3D shape. AlphaFold 2 predicts shapes like this from a protein's sequence. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Protein%20FOXC2%20PDB%201d5v.png">Emw</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #015</span><span class="tag">GENERATIVE AI</span></div>
-          <h3>2022: ChatGPT Deployment</h3>
-          <p>OpenAI releases ChatGPT, democratizing conversational AI and natural language generation for hundreds of millions worldwide.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2022</span>
+          <div class="event">
+            <h3>ChatGPT</h3>
+            <p>OpenAI releases ChatGPT, bringing conversational AI to hundreds of millions of people.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/OpenAI%202017-22%20logo.svg?width=900" alt="OpenAI logo" loading="lazy">
+              <figcaption>OpenAI's logo at the time ChatGPT launched. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:OpenAI%202017-22%20logo.svg">OpenAI (logo)</a>, Public domain, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card">
-          <div class="card-hud"><span>LOG: #016</span><span class="tag">FRONTIER MODELS</span></div>
-          <h3>2023: Multimodal Frontier</h3>
-          <p>GPT-4, Gemini, and Claude 2 emerge, offering multi-sensory reasoning across text, voice, visual recognition, and advanced code synthesis.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2023</span>
+          <div class="event">
+            <h3>Multimodal models</h3>
+            <p>GPT-4, Gemini and Claude 2 arrive, able to work with text, images and code.</p>
+            <figure class="figure diagram logo-row timeline-fig">
+              <div class="fig-row"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Google%20Gemini%20logo.svg?width=600" alt="Google Gemini logo" loading="lazy"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Claude%20AI%20logo.svg?width=600" alt="Claude logo" loading="lazy"></div>
+              <figcaption>Logos of Google Gemini and Anthropic's Claude, two of 2023's new models. GPT-4 came from OpenAI. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Google%20Gemini%20logo.svg">Google (logo)</a>, Public domain, via Wikimedia Commons; Image: <a href="https://commons.wikimedia.org/wiki/File:Claude%20AI%20logo.svg">Anthropic (logo)</a>, Public domain, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-        <article class="matrix-card wide-card">
-          <div class="card-hud"><span>LOG: #017</span><span class="tag">OPEN-WEIGHTS</span></div>
-          <h3>2024: Open Source Surge</h3>
-          <p>High-performance open-weights models like Mistral transform AI research, democratizing cutting-edge model deployment for developers globally.</p>
-        </article>
+          </div>
+        </li>
+        <li>
+          <span class="year">2024</span>
+          <div class="event">
+            <h3>Open-weights models</h3>
+            <p>High-performing models with downloadable weights, such as Mistral's models and Meta's Llama 3, let developers run advanced AI themselves.</p>
+          </div>
+        </li>
+        <li>
+          <span class="year">Jan 2025</span>
+          <div class="event">
+            <h3>DeepSeek R1</h3>
+            <p>China's DeepSeek releases R1, a free open-weights &ldquo;reasoning&rdquo; model. It matched top US models for far less money, which caused Nvidia's stock to lose about $590 billion in one day.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure diagram timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/DeepSeek%20logo.svg?width=900" alt="DeepSeek logo with a blue whale" loading="lazy">
+              <figcaption>DeepSeek's logo. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:DeepSeek%20logo.svg">DeepSeek (logo)</a>, <a href="https://opensource.org/license/mit">MIT License</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-      </div>
-    </section>
+          </div>
+        </li>
+        <li>
+          <span class="year">Aug 2026</span>
+          <div class="event">
+            <h3>EU AI transparency rules take effect</h3>
+            <p>New transparency rules were introduced in the EU's AI Act, the first major AI law, and took effect. This law requires chatbots to tell people they are talking to an AI. AI-generated images, video and audio must be marked so they can be detected, deepfakes must be labeled, and people must be told when AI is analyzing their emotions.</p>
+            <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+            <figure class="figure timeline-fig">
+              <img src="https://commons.wikimedia.org/wiki/Special:FilePath/European%20Parliament%20building%20Brussels%203.jpg?width=900" alt="Entrance of the European Parliament building in Brussels with EU flags" loading="lazy">
+              <figcaption>The European Parliament in Brussels. The EU made the AI Act, the first major law for AI. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:European%20Parliament%20building%20Brussels%203.jpg">Steven Lek</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+            </figure>
 
-    <section style="margin-top: 50px; text-align: center;">
-      <a href="Types-of-AI.html" class="nav-btn" style="display: inline-block; padding: 14px 32px; font-weight: bold;">
-        Next Protocol: Types of AI&rarr;
-      </a>
-    </section>
+          </div>
+        </li>
+      </ol>
+    </article>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="HistoryofAI1-1.html"><span>Previous</span>Origins of artificial intelligence</a>
+      <a class="pager-next" href="FundamentalConcepts2-1.html" data-complete-lesson="HistoryofAI1-2"><span>Next module</span>Module 2: Machine learning</a>
+    </nav>
+
   </main>
 
-  <footer>
-    <p>&copy; Curiosity Lab. All rights reserved.</p>
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
   </footer>
-
 </body>
 </html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Knowledge check
+  Final quiz: instant feedback per question, score at the end, pass bonus at 50%+.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge check | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html" aria-current="page">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <header class="lesson-head">
+      <p class="lesson-meta">Final assessment</p>
+      <h1>Knowledge check</h1>
+      <p>Ten questions covering every module. Pick an answer to see right away whether you got it. Score 50% or higher to pass and earn the pass bonus.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <!-- Running tally, kept at the top of the screen while you scroll (scripts.js, section 10) -->
+      <p class="quiz-progress" data-quiz-counter aria-live="polite">0 of 10 answered</p>
+    </article>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q1" data-answer="a" data-final aria-labelledby="final-q1-title">
+      <p class="quiz-label">Question 1 of 10</p>
+      <h2 class="quiz-question" id="final-q1-title">What is the main purpose of natural language processing (NLP)?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Allowing computers to understand and work with human language</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Allowing computers to create realistic images</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Improving computer hardware performance</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Teaching computers to recognize physical objects</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>NLP is the part of AI that works with human language: understanding it (NLU) and generating it (NLG).</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q2" data-answer="b" data-final aria-labelledby="final-q2-title">
+      <p class="quiz-label">Question 2 of 10</p>
+      <h2 class="quiz-question" id="final-q2-title">What is tokenization in NLP?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Converting words into images</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Breaking text into smaller units called tokens</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Removing all punctuation from text</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Translating text into another language</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Tokenization splits text into tokens, which are words or pieces of words the model works with.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q3" data-answer="b" data-final aria-labelledby="final-q3-title">
+      <p class="quiz-label">Question 3 of 10</p>
+      <h2 class="quiz-question" id="final-q3-title">How do language models commonly learn to generate text during pre-training?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">By memorizing every sentence in a database</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">By predicting what token comes next</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">By copying responses from human conversations</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">By translating every sentence into numbers only</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Next-token prediction: the model guesses the next token, is scored, and adjusts its weights.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q4" data-answer="c" data-final aria-labelledby="final-q4-title">
+      <p class="quiz-label">Question 4 of 10</p>
+      <h2 class="quiz-question" id="final-q4-title">Which is an example of a limitation of NLP?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">It can process written language</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">It can translate between languages</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">It may misunderstand sarcasm or ambiguous wording</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">It can identify patterns in text</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>The other options are things NLP can do. Sarcasm and ambiguity depend on context, which is hard for AI.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q5" data-answer="c" data-final aria-labelledby="final-q5-title">
+      <p class="quiz-label">Question 5 of 10</p>
+      <h2 class="quiz-question" id="final-q5-title">Which NLP application identifies whether a customer review is positive or negative?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Speech recognition</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Object detection</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Sentiment analysis</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">Image classification</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Sentiment analysis judges the opinion or feeling in a piece of text.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q6" data-answer="a" data-final aria-labelledby="final-q6-title">
+      <p class="quiz-label">Question 6 of 10</p>
+      <h2 class="quiz-question" id="final-q6-title">Who is held responsible for AI decisions?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">The developers and users of the AI system</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">The developers</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">The users</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">None of the above</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Responsibility is shared between the people who build AI and the people who use it.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q7" data-answer="d" data-final aria-labelledby="final-q7-title">
+      <p class="quiz-label">Question 7 of 10</p>
+      <h2 class="quiz-question" id="final-q7-title">What is the appropriate way to use AI?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">To troll your friends</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">To completely take over decision-making</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">To hack websites</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">As a helpful assistant, not a decision-maker</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>AI should support people's decisions, with a person in charge of anything important.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q8" data-answer="c" data-final aria-labelledby="final-q8-title">
+      <p class="quiz-label">Question 8 of 10</p>
+      <h2 class="quiz-question" id="final-q8-title">What is bias in AI?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">AI does not have bias and creates randomly generated content</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">AI is designed to be positive in its decision-making process</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">A systematic favoring of certain outcomes over others in AI decision-making</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">AI is designed to be negative in its decision-making process</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Bias is a systematic favoring of some outcomes over others, often learned from one-sided data.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q9" data-answer="a" data-final aria-labelledby="final-q9-title">
+      <p class="quiz-label">Question 9 of 10</p>
+      <h2 class="quiz-question" id="final-q9-title">What are the six main methods for writing a good prompt?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Context and examples, testing and refining, defining output, formatting, instructions and constraints, and fine-tuning and adapting</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Calling the AI by a special nickname, defining output, formatting, instructions and constraints, and joking with the AI</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Context and examples, testing and refining, insulting the AI, formatting, and fine-tuning and adapting</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">There is no such thing as a &ldquo;good prompt&rdquo;; you just have to experiment</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>These are the six methods from the prompt engineering lesson.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="final-q10" data-answer="c" data-final aria-labelledby="final-q10-title">
+      <p class="quiz-label">Question 10 of 10</p>
+      <h2 class="quiz-question" id="final-q10-title">Which of these is an example of role prompting?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">&ldquo;Explain how to do long division.&rdquo;</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">&ldquo;Can you solve this math problem in multiple steps?&rdquo;</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">&ldquo;Can you act like my math teacher and answer this question?&rdquo;</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">&ldquo;Can you explain this concept in simpler terms?&rdquo;</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Role prompting gives the AI a persona to take on, like a math teacher.</p>
+    </section>
+
+    <!-- Result box: hidden until every question is answered -->
+    <section id="quiz-result" class="quiz-result" hidden aria-labelledby="result-title">
+      <h2 id="result-title">Your score</h2>
+      <p class="score" data-score></p>
+      <p data-result-message></p>
+      <div class="actions">
+        <button type="button" class="button secondary" data-retake>Retake quiz</button>
+        <a class="button" href="index.html">See your progress</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

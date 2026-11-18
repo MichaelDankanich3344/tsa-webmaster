@@ -1,74 +1,130 @@
 <!doctype html>
+<!--
+  Curiosity Lab: AI learning portal
+  Home page: course intro, progress panel (level + XP) and the module list.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Curiosity Lab | AI Learning Portal</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI learning portal | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="circuit" aria-hidden="true">
-      <div class="trace"></div>
-      <div class="trace"><span class="down"></span></div>
-      <div class="trace"><span class="up"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="down"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="up"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="down"></span></div>
-      <div class="trace"></div>
-      <div class="trace"><span class="up"></span></div>
-      <div class="trace"></div>
-    </div>
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
 
-    <header>
-      <a class="brand" href="index.html">Curiosity Lab</a>
-      <nav aria-label="Main navigation">
-        <a href="index.html" aria-current="page">Home</a>
-        <a href="references.html">References</a>
-      </nav>
-    </header>
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
 
-    <main>
-      <section>
-        <p class="eyebrow type" style="--n:28; --speed:0.03s">AI essentials for grades 9–12</p>
-        <h1 class="type nowrap" style="--n:14; --speed:0.07s; --delay:0.5s">Curiosity Lab.</h1>
-      </section>
+  <main id="main" class="home">
 
-      <section class="modules">
-        <article style="--delay: 0.1s;">
-          <h2>Module 01</h2>
-          <p>Explore the timeline of artificial intelligence from early theory to modern neural networks.</p>
-          <a href="HistoryofAI.html" class="nav-btn">History of AI &rarr;</a>
-        </article>
+    <!-- Hero: typing-animation title -->
+    <section>
+      <p class="eyebrow type" style="--n:28; --speed:0.03s">AI essentials for grades 9&ndash;12</p>
+      <h1 class="type nowrap" style="--n:14; --speed:0.07s; --delay:0.5s">Curiosity Lab.</h1>
+      <p class="hero-desc">Learn how artificial intelligence works, where it came from, and how to use it responsibly.</p>
+    </section>
 
-        <article style="--delay: 0.2s;">
-          <h2>Module 02</h2>
-          <p>Learn the many types of AI, their capabilities and functions</p>
-          <a href="Types-of-AI.html" class="nav-btn">Types of AI &rarr;</a>
-        </article>
+    <section class="modules" aria-label="Your progress and modules">
+      <!-- Progress panel (replaces the old badge list).
+           scripts.js (section 9) fills in the level, XP and bar from saved progress.
+           The text below is what shows if JavaScript is turned off. -->
+      <article id="progress-panel" class="full progress-panel" style="--delay: 0.1s;" aria-labelledby="progress-title">
+        <div>
+          <p class="muted" data-level-number>Level 1 of 6</p>
+          <h2 id="progress-title" class="level-name" data-level-name>Beginner</h2>
+        </div>
+        <div>
+          <div class="xp-bar" role="progressbar" aria-label="Progress to next level"
+               aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="xp-bar-fill"></div>
+          </div>
+          <p class="panel-row"><span data-xp-total>0 XP earned</span><span data-xp-next>120 XP to Explorer</span></p>
+          <!-- Level track: Beginner to Completion, built by scripts.js -->
+          <ol class="level-track" aria-label="Levels"></ol>
+          <p class="panel-hint">Earn XP by finishing lessons, answering questions, completing modules and passing the knowledge check. Finish everything to become an AI Scholar.</p>
+          <button type="button" class="reset-btn">Reset progress</button>
+        </div>
+      </article>
 
-        <article style="--delay: 0.3s;">
-          <h2>Module 03</h2>
-          <p>A step twords modern AI</p>
-          <a href="MachineLearning.html" class="nav-btn">Machine Learning&rarr;</a>
-        </article>
+      <!-- Module cards. Each status pill is updated by scripts.js. -->
+      <article style="--delay: 0.2s;">
+        <h2>Module 01</h2>
+        <p>Explore the timeline of artificial intelligence from early theory to modern neural networks.</p>
+        <div class="card-actions">
+          <a href="HistoryofAI1-1.html" class="nav-btn">History of AI</a>
+          <span class="status" data-module-status="m1">Not started</span>
+        </div>
+      </article>
 
-        <article style="--delay: 0.4s;">
-          <h2>Module 04</h2>
-          <p>How to use AI on the daily and final vocab review.</p>
-          <a href="AIeveryday.html" class="nav-btn">Daily AI uses &rarr;</a>
-        </article>
+      <article style="--delay: 0.3s;">
+        <h2>Module 02</h2>
+        <p>Learn fundamental AI concepts like machine learning, natural language processing and computer vision.</p>
+        <div class="card-actions">
+          <a href="FundamentalConcepts2-1.html" class="nav-btn">Fundamental concepts</a>
+          <span class="status" data-module-status="m2">Not started</span>
+        </div>
+      </article>
 
-        <article class="wide" style="--delay: 0.5s;">
-          <h2>Knowledge Check</h2>
-          <p>Test your understanding with an interactive quiz covering all portal learning objectives.</p>
-          <a href="Quiz-Test.html" class="nav-btn">Practice Quiz &rarr;</a>
-        </article>
-      </section>
-    </main>
+      <article style="--delay: 0.4s;">
+        <h2>Module 03</h2>
+        <p>Discover AI tools and techniques: prompt engineering, generative AI and automation.</p>
+        <div class="card-actions">
+          <a href="AIToolsandTechniques3-1.html" class="nav-btn">AI tools and techniques</a>
+          <span class="status" data-module-status="m3">Not started</span>
+        </div>
+      </article>
 
-  </body>
+      <article style="--delay: 0.5s;">
+        <h2>Module 04</h2>
+        <p>Learn to use AI safely and responsibly.</p>
+        <div class="card-actions">
+          <a href="AIEthics4-1.html" class="nav-btn">AI ethics</a>
+          <span class="status" data-module-status="m4">Not started</span>
+        </div>
+      </article>
+
+      <article class="wide" style="--delay: 0.6s;">
+        <h2>Knowledge check</h2>
+        <p>Test your understanding with 10 questions covering every module. Score 50% or higher to pass.</p>
+        <div class="card-actions">
+          <a href="quiz-test.html" class="nav-btn">Practice quiz</a>
+          <span class="status" data-module-status="final">Not passed yet</span>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
 </html>
