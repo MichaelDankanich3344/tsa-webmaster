@@ -122,6 +122,7 @@
       lessons: {},
       modules: {},
       questions: {},
+      answered: {},      // lesson questions answered at least once, right or wrong (unlocks Next)
       finalPassed: false,
       finalBest: 0,
       pending: [],
@@ -667,7 +668,11 @@
   function setupLessonQuestions() {
     document.querySelectorAll(".quiz[data-question-id]:not([data-final])").forEach((quiz) => {
       setupQuestion(quiz, (isRight) => {
+        // Any answer counts toward unlocking "Next" (section 8b)
+        state.answered[quiz.dataset.questionId] = true;
+        saveState();
         if (isRight) runAndCelebrate(() => completeQuestion(quiz.dataset.questionId, false));
+        updateNextLock();
       });
     });
   }
@@ -681,10 +686,94 @@
      ------------------------------------------------------------------- */
   function setupLessonLinks() {
     document.querySelectorAll("[data-complete-lesson]").forEach((link) => {
-      link.addEventListener("click", () => {
+      link.addEventListener("click", (event) => {
+        // Locked: stay on the page and point at the unanswered question
+        if (link.classList.contains("is-locked")) {
+          event.preventDefault();
+          nudgeToQuestion();
+          return;
+        }
         runAndCelebrate(() => completeLesson(link.dataset.completeLesson), { defer: true });
       });
     });
+    updateNextLock();
+  }
+
+
+  /* -------------------------------------------------------------------
+     8b. NEXT-LESSON LOCK
+     On a lesson page with check-your-understanding questions, the
+     "Next" link stays locked until every question on the page has been
+     answered (right OR wrong). Answers are remembered in state.answered,
+     so a student who comes back to review a finished lesson is never
+     locked out. Pages without questions are never locked.
+     ------------------------------------------------------------------- */
+  function lessonQuestions() {
+    return Array.from(document.querySelectorAll(".quiz[data-question-id]:not([data-final])"));
+  }
+
+  function unansweredQuestions() {
+    return lessonQuestions().filter((quiz) => {
+      const id = quiz.dataset.questionId;
+      return !quiz.classList.contains("is-answered") && !state.answered[id] && !state.questions[id];
+    });
+  }
+
+  function updateNextLock() {
+    const link = document.querySelector(".pager-next[data-complete-lesson]");
+    if (!link || lessonQuestions().length === 0) return;
+
+    const lessonDone = state.lessons[link.dataset.completeLesson];
+    const left = lessonDone ? 0 : unansweredQuestions().length;
+    const pager = link.closest(".pager");
+
+    // The hint line under the pager explains why Next is locked
+    let hint = document.querySelector(".pager-hint");
+    if (!hint) {
+      hint = document.createElement("p");
+      hint.className = "pager-hint";
+      hint.id = "pager-hint";
+      hint.setAttribute("role", "status");
+      pager.insertAdjacentElement("afterend", hint);
+    }
+
+    if (left > 0) {
+      link.classList.add("is-locked");
+      link.setAttribute("aria-disabled", "true");
+      link.setAttribute("aria-describedby", "pager-hint");
+      hint.hidden = false;
+      hint.textContent = left === 1
+        ? "Answer the question above to unlock the next lesson."
+        : "Answer the " + left + " questions above to unlock the next lesson.";
+    } else {
+      const wasLocked = link.classList.contains("is-locked");
+      link.classList.remove("is-locked");
+      link.removeAttribute("aria-disabled");
+      link.removeAttribute("aria-describedby");
+      if (wasLocked) {
+        hint.hidden = false;
+        hint.classList.add("is-unlocked");
+        hint.textContent = "Next lesson unlocked.";
+      } else {
+        hint.hidden = true;
+      }
+    }
+  }
+
+  // Scrolls to the first unanswered question and gives the hint a shake
+  function nudgeToQuestion() {
+    const target = unansweredQuestions()[0];
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+      const first = target.querySelector(".answer");
+      if (first) first.focus({ preventScroll: true });
+    }
+    const hint = document.querySelector(".pager-hint");
+    if (hint) {
+      hint.classList.remove("is-nudged");
+      void hint.offsetWidth; // restart the CSS animation
+      hint.classList.add("is-nudged");
+    }
   }
 
 

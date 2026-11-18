@@ -1564,6 +1564,57 @@ h3 {
   box-shadow: 0 0 12px rgba(88, 222, 255, 0.2);
 }
 
+/* Locked "Next" link: dimmed until every question on the page has an
+   answer (scripts.js, section 8b). It stays focusable so keyboard and
+   screen-reader users still hear why it is locked. */
+.pager .pager-next.is-locked {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  border-style: dashed;
+  border-color: var(--border);
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.pager .pager-next.is-locked:hover {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: none;
+  transform: none;
+}
+
+.pager .pager-next.is-locked:hover span {
+  color: var(--muted);
+}
+
+/* Lock icon in front of the label */
+.pager .pager-next.is-locked span::before {
+  content: "\1F512\FE0E  ";
+}
+
+.pager-hint {
+  margin: 12px 0 0;
+  text-align: right;
+  font: 0.9rem/1.4 var(--font-mono);
+  color: var(--muted);
+}
+
+.pager-hint.is-unlocked {
+  color: var(--correct);
+}
+
+.pager-hint.is-nudged {
+  color: var(--wrong);
+  animation: hintShake 0.45s ease;
+}
+
+@keyframes hintShake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
 .site-footer {
   max-width: 1100px;
   margin: 60px auto 0;
@@ -1618,6 +1669,10 @@ h3 {
 
   .pager a {
     max-width: none;
+  }
+
+  .pager-hint {
+    text-align: left;
   }
 }
 
