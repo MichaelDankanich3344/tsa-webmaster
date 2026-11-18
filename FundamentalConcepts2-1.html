@@ -1,0 +1,166 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Machine learning
+  Module 2, lesson 1: how machine learning learns and its common problems.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine learning | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 02: Fundamental concepts</a>, lesson 1 of 4</p>
+      <h1>Machine learning</h1>
+      <p class="goal"><strong>Success criteria:</strong> Understand the basics of machine learning and its applications.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure diagram side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Colored_neural_network.svg?width=900" alt="Diagram of a neural network with an input layer, a hidden layer and an output layer connected by arrows" loading="lazy">
+          <figcaption>A simple neural network: input layer (red), hidden layer (blue) and output layer (green). <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Colored_neural_network.svg">Glosser.ca</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+  <p>Machine learning is a part of artificial intelligence that helps computers learn from information and make predictions. It can do things like sort pictures, look at data, and predict price changes. It can also find patterns and get better over time. Machine learning is used in a lot of things people use every day without even knowing it.</p>
+      <p>Algorithms have to be tested and changed to make sure they work correctly. Some algorithms use many layers to do harder tasks. This is called <strong>deep learning</strong>. It uses neural networks that work a bit like the human brain. These networks help computers learn from examples and improve with more information.</p>
+    </article>
+<section class="stream" aria-labelledby="ml-how">
+      <h2 id="ml-how">How machine learning learns</h2>
+      <p class="section-intro">There are three main ways a model learns from information. Each works differently and has its own uses.</p>
+      <dl class="concept-grid">
+        <div>
+          <dt>Supervised learning</dt>
+          <dd><figure class="card-fig"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Credit%20Card%20Chip%20(34684294971).jpg?width=600" alt="Close-up of the gold chip on a credit card" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Credit%20Card%20Chip%20(34684294971).jpg">kuhnmi</a>, <a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>, via Wikimedia Commons</figcaption></figure>Learns from labeled data: information that already has the right answers, like spam filters or stock price predictions. A common real-world example is credit card fraud detection. The model is trained on past transactions labeled &ldquo;fraudulent&rdquo; or &ldquo;legitimate,&rdquo; learns the patterns, and can then flag suspicious activity in real time.</dd>
+        </div>
+        <div>
+          <dt>Unsupervised learning</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/K-means%20convergence.gif?width=600" alt="Animation of dots being grouped into clusters by the k-means algorithm" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:K-means%20convergence.gif">Chire</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption></figure>Finds patterns in unlabeled data. It uses information without labels and tries to find patterns on its own. Examples include grouping customers and finding unusual activity.</dd>
+        </div>
+        <div>
+          <dt>Reinforcement learning</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Reinforcement%20learning%20diagram.svg?width=600" alt="Diagram: an agent takes an action in an environment and gets back a reward and a new state" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Reinforcement%20learning%20diagram.svg">Megajuice</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</figcaption></figure>Learns by trying things and getting feedback. Examples include video games, robots and self-driving cars. Over time, it learns which choices work best.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="stream" aria-labelledby="ml-problems">
+      <h2 id="ml-problems">Problems with machine learning</h2>
+      <dl class="concept-grid">
+        <div>
+          <dt>Good information is needed</dt>
+          <dd><figure class="card-fig"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/BalticServers%20data%20center.jpg?width=600" alt="Rows of server racks with blue lights in a data center" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:BalticServers%20data%20center.jpg">BalticServers.com</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons</figcaption></figure>One big problem is that machine learning needs good information to work correctly, and getting it can take a lot of time and money. If the information is poor, the model might give wrong answers. Imbalanced data, overfitting and underfitting can also make a model work worse.</dd>
+        </div>
+        <div>
+          <dt>Some models are hard to understand</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Blackbox3D-withGraphs.png?width=600" alt="Diagram of a black box with an input signal going in and an output signal coming out" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Blackbox3D-withGraphs.png">Krauss</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption></figure>People might not know why the computer made a certain choice. There are also privacy, security and bias concerns, because models can sometimes give unfair answers or share private information. Models also need updating when things change.</dd>
+        </div>
+        <div>
+          <dt>Biased data, overfitting and data leakage</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Overfitting.svg?width=600" alt="Two groups of dots separated by a smooth line and an overfitted wiggly line" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Overfitting.svg">Chabacano</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption></figure>If the information a model uses is unfair or missing important details, it can make wrong choices. <strong>Overfitting</strong> is when a model memorizes its training data instead of learning patterns, so it struggles with new information. <strong>Data leakage</strong> is when a model sees information during training that it shouldn't have, making results look better than they really are.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m2-q1" data-answer="d" aria-labelledby="m2-q1-title">
+      <p class="quiz-label">Question 1 of 2</p>
+      <h2 class="quiz-question" id="m2-q1-title">Which of these is NOT a common problem with machine learning models?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Good information is required to make accurate predictions</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Interpreting models can be difficult</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Biased data can sway decisions</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">AI researchers sometimes aren't motivated to work</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Data quality, hard-to-interpret models and biased data are all real problems with the models themselves. Researchers' motivation isn't a property of a model.</p>
+    </section>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m2-q2" data-answer="c" aria-labelledby="m2-q2-title">
+      <p class="quiz-label">Question 2 of 2</p>
+      <h2 class="quiz-question" id="m2-q2-title">What does supervised learning mean?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">Learning by constant feedback</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">Learning from unlabeled data</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">Learning from labeled data</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">None of the above</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>Supervised learning trains on labeled data: examples that already have the correct answer attached. Learning from feedback is reinforcement learning, and unlabeled data is unsupervised learning.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="HistoryofAI1-2.html"><span>Previous</span>Timeline of AI</a>
+      <a class="pager-next" href="FundamentalConcepts2-2.html" data-complete-lesson="FundamentalConcepts2-1"><span>Next lesson</span>Natural language processing</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

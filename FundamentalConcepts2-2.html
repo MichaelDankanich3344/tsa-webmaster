@@ -1,0 +1,134 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Natural language processing
+  Module 2, lesson 2: NLU, NLG and how modern models generate text.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natural language processing | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 02: Fundamental concepts</a>, lesson 2 of 4</p>
+      <h1>Natural language processing</h1>
+      <p class="goal"><strong>Success criteria:</strong> Understand the basics of natural language processing and its applications.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Amazon%20Echo%20Dot%20(virtual%20digital%20assistant)%20with%20normal%20coffee%20mug%20as%20size%20comparison.jpg?width=900" alt="An Amazon Echo Dot smart speaker next to a coffee mug" loading="lazy">
+          <figcaption>Voice assistants like Alexa use NLP to understand spoken questions and answer them. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Amazon%20Echo%20Dot%20(virtual%20digital%20assistant)%20with%20normal%20coffee%20mug%20as%20size%20comparison.jpg">Pittigrilli</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+  <p>Natural language processing (NLP) is a subfield of AI that combines linguistics, computer science and machine learning to help AI work with human language.</p>
+      <p>Human language is complicated: words can have more than one meaning, structuring a sentence differently can change its effect, and you need context as you go. AI needs a way to break all of that down, and NLP is how we do it.</p>
+      <p>NLP is the umbrella field for two major parts: <strong>natural language understanding (NLU)</strong> and <strong>natural language generation (NLG)</strong>.</p>
+    </article>
+<section class="stream" aria-labelledby="nlu">
+      <h2 id="nlu">Natural language understanding (NLU)</h2>
+      <p class="section-intro">NLU uses language processing techniques to turn unstructured text into information a computer can interpret. There are five major ideas to understand.</p>
+      <dl class="concept-grid">
+        <div>
+          <dt>Syntax analysis</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/ParseTree.svg?width=600" alt="Syntax tree splitting the sentence John hit the ball into a noun phrase and a verb phrase" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:ParseTree.svg">Stannered</a>, Public domain, via Wikimedia Commons</figcaption></figure>Examines the grammatical structure of a sentence and how words relate to one another. It identifies nouns, verbs, subjects, objects and the relationships between words.</dd>
+        </div>
+        <div>
+          <dt>Semantic analysis</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/SemanticNetExample.jpg?width=600" alt="Semantic network diagram connecting words by their relationships" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:SemanticNetExample.jpg">WillWare</a>, Public domain, via Wikimedia Commons</figcaption></figure>Focuses on the meaning of words. If someone says they're freezing, an AI might connect that with water turning into ice. Semantic analysis helps it understand the person actually means they're very cold.</dd>
+        </div>
+        <div>
+          <dt>Intent analysis</dt>
+          <dd><figure class="card-fig"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Iphone-weather-cold.jpg?width=600" alt="A phone weather app showing a cold temperature" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Iphone-weather-cold.jpg">Paolo Neo</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</figcaption></figure>Identifies what a person wants to accomplish. For &ldquo;What's the weather?&rdquo; the intent is getting weather information, and the AI recognizes that same intent across all the different ways people ask for the weather.</dd>
+        </div>
+        <div>
+          <dt>Entity analysis</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Simple%20NER%20example.png?width=600" alt="The sentence John came from New York with John labelled PER and New York labelled LOC" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Simple%20NER%20example.png">Arthur-Kunst</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption></figure>Picks out important pieces of information and sorts them into categories such as people, locations, organizations, dates and times. This lets the AI pull out what's useful.</dd>
+        </div>
+        <div>
+          <dt>Contextual analysis</dt>
+          <dd><figure class="card-fig diagram"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yellow-pencil.svg?width=600" alt="A yellow pencil" loading="lazy"><figcaption class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Yellow-pencil.svg">Ice-Dolphin</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>, via Wikimedia Commons</figcaption></figure>Uses earlier information and the relationships between words to work out what someone means.<p class="example">Person 1: &ldquo;I just bought a new pencil.&rdquo; Person 2: &ldquo;What brand is it?&rdquo; Context tells the AI that &ldquo;it&rdquo; means the pencil.</p>Context matters for sarcasm, follow-up questions, stories and pronouns, all things chatbots have to handle.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="stream" aria-labelledby="nlg">
+      <h2 id="nlg">Natural language generation (NLG)</h2>
+      <p class="section-intro">The other side of NLP lets AI create responses in human language. Classic NLG has four stages, done in order.</p>
+      <ol class="steps">
+        <li><strong>Content selection.</strong> Decides what information goes in the response. Asked to explain the French Revolution in three sentences, the system would focus on why it happened, the key events and the outcome, and leave out unrelated history.</li>
+        <li><strong>Document and section planning.</strong> Puts the information in a logical order: what comes first, which facts belong together, how many sentences are needed and how the ideas connect.</li>
+        <li><strong>Lexicalization and language selection.</strong> Chooses the words and expressions to use, considering vocabulary, tone, formality and the audience.</li>
+        <li><strong>Linguistic realization.</strong> Turns the plan and chosen words into grammatically correct sentences, handling grammar, sentence structure and punctuation.</li>
+      </ol>
+    </section>
+
+    <section class="stream" aria-labelledby="tokens">
+      <h2 id="tokens">How modern AI generates text</h2>
+      <p>Modern models, like GPT-style language models, use neural networks with a Transformer structure. They don't always go through the four NLG stages as separate parts. Instead, they use patterns learned in training to predict and create a series of <strong>tokens</strong> (small pieces of words).</p>
+
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+      <figure class="figure diagram">
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Full_GPT_architecture.svg?width=900" alt="Block diagram of a GPT language model showing tokens passing through stacked transformer blocks" loading="lazy">
+        <figcaption>The parts of a GPT-style language model. Text goes in at the bottom as tokens and a prediction for the next token comes out at the top. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Full_GPT_architecture.svg">Marxav (vector version by Mrmw)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</span></figcaption>
+      </figure>
+      <ol class="steps">
+        <li><strong>Receive the input.</strong> The AI gets a question, an instruction or some other input, for example &ldquo;Explain how photosynthesis works.&rdquo;</li>
+        <li><strong>Process the context.</strong> The model looks at the input and how it connects to relevant background knowledge.</li>
+        <li><strong>Predict the next token.</strong> The model works out which tokens are most likely to come next. After &ldquo;Photosynthesis allows plants to&hellip;&rdquo; a likely continuation is &ldquo;convert light energy into chemical energy.&rdquo;</li>
+        <li><strong>Generate more tokens.</strong> The model keeps adding tokens, using the text it has already written as a guide.</li>
+        <li><strong>Create the response.</strong> The tokens are turned into readable text and shown to the user.</li>
+      </ol>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="FundamentalConcepts2-1.html"><span>Previous</span>Machine learning</a>
+      <a class="pager-next" href="FundamentalConcepts2-2-2.html" data-complete-lesson="FundamentalConcepts2-2"><span>Next lesson</span>Training AI with language</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>

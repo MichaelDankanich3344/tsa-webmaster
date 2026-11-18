@@ -1,0 +1,104 @@
+<!doctype html>
+<!--
+  Curiosity Lab: Using AI appropriately
+  Module 4, lesson 2: AI as an assistant, not a decision maker.
+  Shared styles: styles.css   Shared behaviour (XP, levels, quizzes): scripts.js
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Using AI appropriately | Curiosity Lab</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- "defer" runs the script after the HTML has loaded -->
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Lets keyboard users jump past the header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Decorative glowing circuit lines in the background (styles.css, section 3) -->
+  <div class="circuit" aria-hidden="true">
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="down"></span></div>
+    <div class="trace"></div>
+    <div class="trace"><span class="up"></span></div>
+    <div class="trace"></div>
+  </div>
+
+  <!-- Site header. scripts.js adds the level chip to the right side. -->
+  <header class="site-header">
+    <a class="brand" href="index.html">Curiosity Lab</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="quiz-test.html">Knowledge check</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main id="main" class="lesson">
+
+    <!-- Lesson heading: where you are in the course, the title, the learning goal -->
+    <header class="lesson-head">
+      <p class="lesson-meta"><a href="index.html#modules">Module 04: AI ethics</a>, lesson 2 of 3</p>
+      <h1>Using AI appropriately</h1>
+      <p class="goal"><strong>Success criteria:</strong> Handle ethical dilemmas about when and how to use AI.</p>
+    </header>
+
+    <!-- Lesson text -->
+    <article class="panel">
+      <!-- Image from Wikimedia Commons (credit in the caption and on references.html) -->
+        <figure class="figure side">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cybersecurity.png?width=900" alt="A glowing padlock on top of a blue circuit board pattern" loading="lazy">
+          <figcaption>Protect your private information when you use AI tools. <span class="credit">Image: <a href="https://commons.wikimedia.org/wiki/File:Cybersecurity.png">jaydeep_ (via Pixabay)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 (public domain)</a>, via Wikimedia Commons</span></figcaption>
+        </figure>
+  <p>AI can be a helpful assistant for many different purposes, but it should be used as an assistant, not as a decision maker. Because it can be wrong or biased, it works best for things like double-checking your answers.</p>
+      <p>It's important to keep a person in charge of important decisions, such as hiring, people's health, and how a business is run. It's also important to protect your private information when talking to an AI.</p>
+    </article>
+
+    <!-- Question: click an answer to see if it's right (handled in scripts.js, section 7) -->
+    <section class="quiz" data-question-id="m4-q2" data-answer="d" aria-labelledby="m4-q2-title">
+      <p class="quiz-label">Check your understanding</p>
+      <h2 class="quiz-question" id="m4-q2-title">What is the appropriate way to use AI?</h2>
+      <div class="answers">
+        <button type="button" class="answer" data-choice="a">
+          <span class="key">A</span>
+          <span class="answer-text">To troll your friends</span>
+        </button>
+        <button type="button" class="answer" data-choice="b">
+          <span class="key">B</span>
+          <span class="answer-text">To completely take over decision-making</span>
+        </button>
+        <button type="button" class="answer" data-choice="c">
+          <span class="key">C</span>
+          <span class="answer-text">To hack websites</span>
+        </button>
+        <button type="button" class="answer" data-choice="d">
+          <span class="key">D</span>
+          <span class="answer-text">As a helpful assistant, not a decision-maker</span>
+        </button>
+      </div>
+      <p class="feedback"></p>
+      <p class="explain" hidden>AI should support people, not replace their judgment. Important decisions need a person in charge.</p>
+    </section>
+
+    <!-- Lesson navigation. Clicking "Next" completes this lesson and awards XP. -->
+    <nav class="pager" aria-label="Lesson navigation">
+      <a class="pager-prev" href="AIEthics4-1.html"><span>Previous</span>Who is responsible for AI decisions?</a>
+      <a class="pager-next" href="AIEthics4-3.html" data-complete-lesson="AIEthics4-2"><span>Next lesson</span>Bias in AI</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Curiosity Lab, an AI course for grades 9&ndash;12. Your progress is saved in this browser.</p>
+  </footer>
+</body>
+</html>
