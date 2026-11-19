@@ -1700,3 +1700,18 @@ h3 {
     animation: none !important;
   }
 }
+
+
+/* Works Cited list on references.html (MLA 9): alphabetical, no bullets,
+   hanging indent so each entry's first line sticks out. */
+.works-cited {
+  list-style: none;
+  padding-left: 0;
+}
+
+.works-cited li {
+  padding-left: 2em;
+  text-indent: -2em;
+  margin-bottom: 0.75em;
+  overflow-wrap: anywhere; /* long URLs wrap instead of overflowing on phones */
+}
